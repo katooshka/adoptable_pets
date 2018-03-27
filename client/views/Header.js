@@ -1,9 +1,11 @@
 import React from 'react';
 
 export class Header extends React.Component {
-    render() {
-      return (
-        <h1>Pets</h1>
-      );
-    }
+  render() {
+    return (
+      <div>
+        <h1>Adoptable Pets</h1>
+      </div>
+    );
   }
+}
