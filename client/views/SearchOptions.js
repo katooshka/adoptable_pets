@@ -5,6 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import { AnimalNames } from './AnimalNames.js';
 import { AnimalTypes } from './AnimalTypes.js';
+import { AnimalGenders } from './AnimalGenders.js';
 import { ShowDeadAnimals } from './ShowDeadAnimals.js';
 import { AnimalAttribute } from './AnimalAttribute.js';
 
@@ -20,15 +21,17 @@ export class SearchOptions extends React.Component {
             showDeadAnimals: false,
             dogChecked: true,
             catChecked: true,
+            gender: null,
             breeds: null,
             colors: null
         };
         this.updateName = this.updateName.bind(this);
         this.updateCatCheck = this.updateCatCheck.bind(this);
         this.updateDogCheck = this.updateDogCheck.bind(this);
+        // this.updateGender = this.updateGender.bind(this);
         this.updateShowDeadAnimals = this.updateShowDeadAnimals.bind(this);
         this.updateBreeds = this.updateBreeds.bind(this);
-        // this.updateColors = this.updateColors.bind(this);
+        this.updateColors = this.updateColors.bind(this);
     }
 
     updateName(name) {
@@ -64,13 +67,33 @@ export class SearchOptions extends React.Component {
     }
 
     updateBreeds(catBreeds, dogBreeds) {
-        const breeds = null;
+        let breeds = null;
         if (catBreeds === null) {
-
-        } else if (dogBreeds === null)
+            breeds = dogBreeds;
+        } else if (dogBreeds === null) {
+            breeds = catBreeds;
+        } else {
+            breeds = catBreeds.concat(dogBreeds);
+        }
         this.setState(() => {
             return {
-                breeds: catBreeds
+                breeds: breeds
+            };
+        });
+    }
+
+    updateColors(catColors, dogColors) {
+        let colors = null;
+        if (catColors === null) {
+            colors = dogColors;
+        } else if (dogColors === null) {
+            colors = catColors;
+        } else {
+            colors = catColors.concat(dogColors);
+        }
+        this.setState(() => {
+            return {
+                colors: colors
             };
         });
     }
@@ -100,6 +123,10 @@ export class SearchOptions extends React.Component {
                     updateDogCheck={() => this.updateDogCheck()}
                     updateCatCheck={() => this.updateCatCheck()}
                 />
+                {/* <h3>Animal genders</h3>
+                <AnimalGenders
+                    names={this.props.names}
+                /> */}
                 <ShowDeadAnimals />
                 <div>
                     <div>
@@ -124,7 +151,7 @@ export class SearchOptions extends React.Component {
                     </div>
                 </div>
                 <MuiThemeProvider>
-                    <RaisedButton label="Submit" style={style} 
+                    <RaisedButton label="Submit" style={style}
                         onClick={() => this.createQuery()}
                     />
                 </MuiThemeProvider>
@@ -132,3 +159,16 @@ export class SearchOptions extends React.Component {
         );
     }
 }
+
+class Query {
+    constructor(name, dogChecked, catChecked, gender, breeds, colors, showDeadAnimals) {
+        this.state.name = name,
+        this.state.dogChecked = dogChecked,
+        this.state.catChecked = catChecked,
+        this.state.gender = gender,
+        this.state.breeds = breeds,
+        this.state.colors = colors,
+        this.state.showDeadAnimals = showDeadAnimals
+    }
+}
+  

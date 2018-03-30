@@ -33,47 +33,12 @@ export class AnimalAttribute extends React.Component {
         }
     }
 
-    // menuItems(attributeValues, values) {
-    //     return (
-    //         <MenuItem
-    //         key="Select all"
-    //         insetChildren={true}
-    //         checked={values && values.indexOf("Select all") > -1}
-    //         value="Select all"
-    //         primaryText="Select all"
-    //         />,
-    //         {attributeValues.map((attributeValue) => (
-    //         <MenuItem
-    //             key={attributeValue}
-    //             insetChildren={true}
-    //             checked={values && values.indexOf(attributeValue) > -1}
-    //             value={attributeValue}
-    //             primaryText={attributeValue}
-    //         />))}
-    //     );
-    //   }
-
     createAttributeValuesList(attributeValues, animalType, attributeName, values, disabled) {
         console.log("values", values)
         const text = `Choose ${animalType} ${attributeName}`;
         const includeAllText = `Include all ${animalType} ${attributeName}`;
         return (
             <MuiThemeProvider>
-                {/* <DropDownMenu value={values} onChange={this.handleChange} multiple={true}>
-                    <MenuItem 
-                        key={"Select all"}
-                        value={"Select all"} 
-                        primaryText="Select all"
-                        checked={!values.length}
-                    />
-                    {attributeValues.map((attributeValue) => (
-                        <MenuItem
-                            key={attributeValue}
-                            value={attributeValue}
-                            primaryText={attributeValue}
-                            checked={values && values.indexOf(attributeValue) > -1}
-                        />))}
-                </DropDownMenu> */}
                 <SelectField
                     multiple={true}
                     hintText={text}
