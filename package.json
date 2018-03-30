@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "export NODE_ENV=development&& babel-node server.js",
-    "build-prod": "export NODE_ENV=production&& webpack && babel-node server.js"
+    "build-prod": "export NODE_ENV=production&& webpack && babel-node server.js",
+    "parseCSV": "babel-node parseCsvToJson.js"
   },
   "author": "katooshka",
   "license": "ISC",
