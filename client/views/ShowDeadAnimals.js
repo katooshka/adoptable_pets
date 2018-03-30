@@ -19,14 +19,14 @@ export class ShowDeadAnimals extends React.Component {
                 <MuiThemeProvider>
                     <div>
                         <h3>Show dead animals?</h3>
-                        <RadioButtonGroup name="showDeadAnimals">
+                        <RadioButtonGroup name="showDeadAnimals" onChange={(value) => this.props.updateShowDeadAnimals(value)}>
                             <RadioButton
-                                value="not_light"
+                                value="true"
                                 label="Yes"
                                 style={styles.radioButton}
                             />
                             <RadioButton
-                                value="light"
+                                value="false"
                                 label="No"
                                 style={styles.radioButton}
                             />
