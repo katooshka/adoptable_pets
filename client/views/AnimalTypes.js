@@ -12,7 +12,7 @@ const styles = {
     },
 };
 
-export class AnimalGenders extends React.Component {
+export class AnimalTypes extends React.Component {
     constructor(props) {
         super(props);
     }
