@@ -44,6 +44,7 @@ export class Main extends React.Component {
                     gendersStatus = {this.state.gendersStatus}
                     colors = {this.state.colors}
                     breeds = {this.state.breeds}
+                    sendQuery = {this.sendQuery}
                 />
                 <SearchResults />
             </div>

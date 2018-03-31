@@ -8,7 +8,7 @@ import MenuItem from 'material-ui/MenuItem';
 export class AnimalAttribute extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { values: [] };
+        this.state = { values: ["Select all"] };
         this.handleChange = this.handleChange.bind(this);
         this.createAttributeValuesList = this.createAttributeValuesList.bind(this);
     }
@@ -71,7 +71,7 @@ export class AnimalAttribute extends React.Component {
             this.props.animalType,
             this.props.attributeName,
             values,
-            this.props.animalTypeChecked === false);
+            !this.props.animalTypeChecked);
         return (
             <div>
                 {animalAttributeValuesList}

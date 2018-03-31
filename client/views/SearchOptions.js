@@ -28,7 +28,7 @@ export class SearchOptions extends React.Component {
             name: null,
             typesStatus: this.props.typesStatus,
             gendersStatus: this.props.gendersStatus,
-            showDeadAnimals: true,
+            showDeadAnimals: false,
             breedsStatus: breedsStatus,
             colorsStatus: colorsStatus,
         };
@@ -96,17 +96,26 @@ export class SearchOptions extends React.Component {
         });
     }
 
-    // createQuery() {
-    //     const query = new Query(
-    //         this.state.name,
-    //         this.state.dogChecked,
-    //         this.state.catChecked,
-    //         this.state.breeds,
-    //         this.state.colors,
-    //         this.state.showDeadAnimals,
-    //     );
-    //     this.props.sendQuery(query);
-    // }
+    createQuery() {
+        const query = new Query(this.state );
+        this.props.sendQuery(query);
+    }
+
+    checkNoAnimalTypeAndGenderIsChosen() {
+        let typeIsChosen = false;
+        for (const [key, value] of this.state.typesStatus) {
+            if (value) {
+                typeIsChosen = true;
+            }
+        }
+        let genderIsChosen = false;
+        for (const [key, value] of this.state.gendersStatus) {
+            if (value) {
+                genderIsChosen = true;
+            }
+        }
+        return !typeIsChosen && !genderIsChosen;
+    }
 
     render() {
         return (
@@ -135,7 +144,7 @@ export class SearchOptions extends React.Component {
                             <AnimalAttribute key={type}
                                 animalAttributeValues={this.props.breeds.get(type)}
                                 attributeName={'Breeds'}
-                                animalChecked={true}
+                                animalTypeChecked={this.state.typesStatus.get(type)}
                                 animalType={type}
                                 updateAttribute={this.updateBreeds}
                             />
@@ -147,31 +156,28 @@ export class SearchOptions extends React.Component {
                             <AnimalAttribute
                                 animalAttributeValues={this.props.colors.get(type)}
                                 attributeName={'Colors'}
-                                animalChecked={true}
+                                animalTypeChecked={this.state.typesStatus.get(type)}
                                 animalType={type}
                                 updateAttribute={this.updateColors}
                             />
                         ))}
                     </div>
                 </div>
-                {/* <MuiThemeProvider>
-                    <RaisedButton label="Submit" style={style}
+                <MuiThemeProvider>
+                    <RaisedButton 
+                        label="Submit" 
+                        style={style}
                         onClick={this.createQuery()}
+                        disabled={!this.state.name && this.checkNoAnimalTypeAndGenderIsChosen()}
                     />
-                </MuiThemeProvider> */}
+                </MuiThemeProvider>
             </div>
         );
     }
 }
 
-// class Query {
-//     constructor(name, dogChecked, catChecked, gender, breeds, colors, showDeadAnimals) {
-//             this.state.name = name,
-//             this.state.dogChecked = dogChecked,
-//             this.state.catChecked = catChecked,
-//             this.state.gender = gender,
-//             this.state.breeds = breeds,
-//             this.state.colors = colors,
-//             this.state.showDeadAnimals = showDeadAnimals
-//     }
-// }
+class Query {
+    constructor(state) {
+        this.state = state;
+    }
+}
