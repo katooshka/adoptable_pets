@@ -26,13 +26,14 @@ export class Main extends React.Component {
             colors: colors,
             breeds: breeds,
             typesStatus: typesStatus,
-            gendersStatus: gendersStatus
+            gendersStatus: gendersStatus,
+            queryResult: null
         };
-        this.sendQuery = this.sendQuery.bind(this);
+        this.getSearchOptions = this.getSearchOptions.bind(this);
     }
 
-    sendQuery(query) {
-        console.log(query);
+    getSearchOptions(query) {
+        this.setState({ queryResult: query });
     }
 
     render() {
@@ -44,9 +45,11 @@ export class Main extends React.Component {
                     gendersStatus = {this.state.gendersStatus}
                     colors = {this.state.colors}
                     breeds = {this.state.breeds}
-                    sendQuery = {this.sendQuery}
+                    sendQuery = {this.getSearchOptions}
                 />
-                <SearchResults />
+                <SearchResults
+                    queryResult = {this.state.queryResult}
+                />
             </div>
         );
     }
