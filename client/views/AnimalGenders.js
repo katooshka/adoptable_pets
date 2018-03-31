@@ -21,6 +21,7 @@ export class AnimalGenders extends React.Component {
         gendersStatus.set("Spayed Female", true);
         super(props);
         this.state = { gendersStatus: gendersStatus };
+        // this.createOnCheckForGender = this.createOnCheckForGender.bind(this);
     }
 
     // updateGenderStatus(event, isInputChecked) {
@@ -36,22 +37,20 @@ export class AnimalGenders extends React.Component {
     //     this.props.updateGenders();
     // }
 
-    /**
-     * @returns 
-     */
+
     createOnCheckForGender(gender) {
-        const onCheck = function(event, isGenderChecked) {
+        const onCheck = (event, isInputChecked) => {
             console.log('event', event);
             console.log('isInputChecked', isInputChecked);
             console.log('gender', gender);
             this.setState((oldState) => {
                 let newGenderStatus = oldState.gendersStatus;
-                newGenderStatus
+                newGenderStatus.set(gender, isInputChecked);
                 return {
-                    gendersStatus: !oldState.catChecked,
+                    gendersStatus: newGenderStatus
                 };
             });
-            this.props.updateGenders();
+            // this.props.updateGenders();
         };
         return onCheck;
     }
@@ -59,12 +58,12 @@ export class AnimalGenders extends React.Component {
     render() {
         return (
             <div>
-                {Object.entries(gendersStatus).map((gender) => (
-                    <MuiThemeProvider>
-                        <Checkbox
+                {Array.from(this.state.gendersStatus.keys()).map(gender => (
+                    <MuiThemeProvider key={gender}>
+                        <Checkbox 
                             label={gender}
                             checked={this.state.gendersStatus.get(gender)}
-                            onCheck={this.createOnCheckForGender(gender)}  // function(Event, boolean)
+                            onCheck={this.createOnCheckForGender(gender)}
                             style={styles.checkbox}
                         />
                     </MuiThemeProvider>))}

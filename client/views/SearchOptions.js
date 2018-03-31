@@ -123,10 +123,8 @@ export class SearchOptions extends React.Component {
                     updateDogCheck={() => this.updateDogCheck()}
                     updateCatCheck={() => this.updateCatCheck()}
                 />
-                {/* <h3>Animal genders</h3>
-                <AnimalGenders
-                    names={this.props.names}
-                /> */}
+                <h3>Animal genders</h3>
+                <AnimalGenders/>
                 <ShowDeadAnimals />
                 <div>
                     <div>
