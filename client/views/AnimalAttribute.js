@@ -14,27 +14,25 @@ export class AnimalAttribute extends React.Component {
     }
 
     handleChange(event, index, values) {
+        let valuesList = [];
         if (!values.length) {
-            let valuesList = [];
             valuesList.push("Select all")
             this.setState({ values: valuesList });
         } 
         else if (values[0] === "Select all") {
-            let valuesList = [];
             valuesList.push(values[values.length - 1]);
             this.setState({ values: valuesList });
         } 
         else if (values[values.length - 1] === "Select all") {
-            let valuesList = [];
             valuesList.push(values[values.length - 1]);
             this.setState({ values: valuesList });
         } else {
             this.setState({ values: values });
         }
+        this.props.updateAttribute(this.props.animalType, this.state.values);
     }
 
     createAttributeValuesList(attributeValues, animalType, attributeName, values, disabled) {
-        console.log("values", values)
         const text = `Choose ${animalType} ${attributeName}`;
         const includeAllText = `Include all ${animalType} ${attributeName}`;
         return (
@@ -68,22 +66,15 @@ export class AnimalAttribute extends React.Component {
 
     render() {
         const { values } = this.state;
-        const catAttributeValuesList = this.createAttributeValuesList(
-            this.props.catAttributeValues,
-            "cat",
+        const animalAttributeValuesList = this.createAttributeValuesList(
+            this.props.animalAttributeValues,
+            this.props.animalType,
             this.props.attributeName,
             values,
-            this.props.catChecked === false);
-        const dogAttributeValuesList = this.createAttributeValuesList(
-            this.props.dogAttributeValues,
-            "dog",
-            this.props.attributeName,
-            values,
-            this.props.dogChecked === false);
+            this.props.animalTypeChecked === false);
         return (
             <div>
-                {catAttributeValuesList}
-                {dogAttributeValuesList}
+                {animalAttributeValuesList}
             </div>
         );
     }

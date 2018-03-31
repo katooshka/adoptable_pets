@@ -15,43 +15,36 @@ const styles = {
 export class AnimalTypes extends React.Component {
     constructor(props) {
         super(props);
+        let typesStatus = this.props.typesStatus;
+        this.state = { typesStatus: typesStatus };
     }
 
-    // updateDogCheck() {
-    //     this.setState((oldState) => {
-    //         return {
-    //             dogChecked: !oldState.dogChecked,
-    //         };
-    //     });
-    // }
-
-    // updateCatCheck() {
-    //     this.setState((oldState) => {
-    //         return {
-    //             catChecked: !oldState.catChecked,
-    //         };
-    //     });
-    // }
+    createOnCheckForType(type) {
+        const onCheck = (event, isInputChecked) => {
+            this.setState((oldState) => {
+                let newTypesStatus = new Map(oldState.typesStatus);
+                newTypesStatus.set(type, isInputChecked);
+                return {
+                    typesStatus: newTypesStatus
+                };
+            });
+            this.props.updateTypeCheck(type);
+        };
+        return onCheck;
+    }
 
     render() {
         return (
             <div>
-                <MuiThemeProvider>
-                    <Checkbox
-                        label="Dogs"
-                        checked={this.props.dogChecked}
-                        onCheck={() => this.props.updateDogCheck()}
-                        style={styles.checkbox}
-                    />
-                </MuiThemeProvider>
-                <MuiThemeProvider>
-                    <Checkbox
-                        label="Cats"
-                        checked={this.props.catChecked}
-                        onCheck={() => this.props.updateCatCheck()}
-                        style={styles.checkbox}
-                    />
-                </MuiThemeProvider>
+                {Array.from(this.state.typesStatus.keys()).map(type => (
+                    <MuiThemeProvider key={type}>
+                        <Checkbox 
+                            label={type}
+                            checked={this.state.typesStatus.get(type)}
+                            onCheck={this.createOnCheckForType(type)}
+                            style={styles.checkbox}
+                        />
+                    </MuiThemeProvider>))}
             </div>
         );
     }

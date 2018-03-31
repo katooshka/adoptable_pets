@@ -14,43 +14,21 @@ const styles = {
 
 export class AnimalGenders extends React.Component {
     constructor(props) {
-        let gendersStatus = new Map();
-        gendersStatus.set("Male", true);
-        gendersStatus.set("Female", true);
-        gendersStatus.set("Neutered Male", true);
-        gendersStatus.set("Spayed Female", true);
         super(props);
+        let gendersStatus = this.props.gendersStatus;
         this.state = { gendersStatus: gendersStatus };
-        // this.createOnCheckForGender = this.createOnCheckForGender.bind(this);
     }
-
-    // updateGenderStatus(event, isInputChecked) {
-    //     console.log(event)
-    //     console.log(isInputChecked)
-    //     this.setState((oldState) => {
-    //         let newGenderStatus = oldState.gendersStatus;
-    //         newGenderStatus
-    //         return {
-    //             gendersStatus: !oldState.catChecked,
-    //         };
-    //     });
-    //     this.props.updateGenders();
-    // }
-
 
     createOnCheckForGender(gender) {
         const onCheck = (event, isInputChecked) => {
-            console.log('event', event);
-            console.log('isInputChecked', isInputChecked);
-            console.log('gender', gender);
             this.setState((oldState) => {
-                let newGenderStatus = oldState.gendersStatus;
+                let newGenderStatus = new Map(oldState.gendersStatus);
                 newGenderStatus.set(gender, isInputChecked);
                 return {
                     gendersStatus: newGenderStatus
                 };
             });
-            // this.props.updateGenders();
+            this.props.updateGenderCheck(gender);
         };
         return onCheck;
     }

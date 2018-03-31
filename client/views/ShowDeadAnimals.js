@@ -13,13 +13,24 @@ const styles = {
 };
 
 export class ShowDeadAnimals extends React.Component {
+
+    createOnCheck() {
+        const onCheck = (event, value) => {
+            this.props.updateShowDeadAnimals(value);
+        };
+        return onCheck;
+    }
+
     render() {
         return (
             <div>
                 <MuiThemeProvider>
                     <div>
                         <h3>Show dead animals?</h3>
-                        <RadioButtonGroup name="showDeadAnimals" onChange={(value) => this.props.updateShowDeadAnimals(value)}>
+                        <RadioButtonGroup 
+                            name="showDeadAnimals"
+                            onChange={(event, value) => this.props.updateShowDeadAnimals(value)}
+                            >
                             <RadioButton
                                 value="true"
                                 label="Yes"

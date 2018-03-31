@@ -16,19 +16,25 @@ const style = {
 export class SearchOptions extends React.Component {
     constructor(props) {
         super(props);
+        let breedsStatus = new Map();
+        Array.from(this.props.breeds.keys()).map(animal => {
+            breedsStatus.set(animal, ['Select all']);
+        });
+        let colorsStatus = new Map();
+        Array.from(this.props.colors.keys()).map(animal => {
+            colorsStatus.set(animal, ['Select all']);
+        });
         this.state = {
             name: null,
-            showDeadAnimals: false,
-            dogChecked: true,
-            catChecked: true,
-            gender: null,
-            breeds: null,
-            colors: null
+            typesStatus: this.props.typesStatus,
+            gendersStatus: this.props.gendersStatus,
+            showDeadAnimals: true,
+            breedsStatus: breedsStatus,
+            colorsStatus: colorsStatus,
         };
         this.updateName = this.updateName.bind(this);
-        this.updateCatCheck = this.updateCatCheck.bind(this);
-        this.updateDogCheck = this.updateDogCheck.bind(this);
-        // this.updateGender = this.updateGender.bind(this);
+        this.updateTypeCheck = this.updateTypeCheck.bind(this);
+        this.updateGenderCheck = this.updateGenderCheck.bind(this);
         this.updateShowDeadAnimals = this.updateShowDeadAnimals.bind(this);
         this.updateBreeds = this.updateBreeds.bind(this);
         this.updateColors = this.updateColors.bind(this);
@@ -42,18 +48,22 @@ export class SearchOptions extends React.Component {
         });
     }
 
-    updateCatCheck() {
+    updateTypeCheck(type) {
         this.setState((oldState) => {
+            let newTypesStatus = new Map(oldState.typesStatus);
+            newTypesStatus.set(type, !newTypesStatus.get(type));
             return {
-                catChecked: !oldState.catChecked
+                typesStatus: newTypesStatus
             };
         });
     }
 
-    updateDogCheck() {
+    updateGenderCheck(gender) {
         this.setState((oldState) => {
+            let newGendersStatus = new Map(oldState.gendersStatus);
+            newGendersStatus.set(gender, !newGendersStatus.get(gender));
             return {
-                dogChecked: !oldState.dogChecked
+                gendersStatus: newGendersStatus
             };
         });
     }
@@ -66,107 +76,102 @@ export class SearchOptions extends React.Component {
         });
     }
 
-    updateBreeds(catBreeds, dogBreeds) {
-        let breeds = null;
-        if (catBreeds === null) {
-            breeds = dogBreeds;
-        } else if (dogBreeds === null) {
-            breeds = catBreeds;
-        } else {
-            breeds = catBreeds.concat(dogBreeds);
-        }
-        this.setState(() => {
+    updateBreeds(animalType, values) {
+        this.setState((oldState) => {
+            let newBreedsStatus = new Map(oldState.breedsStatus);
+            newBreedsStatus.set(animalType, values);
             return {
-                breeds: breeds
+                breedsStatus: newBreedsStatus
             };
         });
     }
 
-    updateColors(catColors, dogColors) {
-        let colors = null;
-        if (catColors === null) {
-            colors = dogColors;
-        } else if (dogColors === null) {
-            colors = catColors;
-        } else {
-            colors = catColors.concat(dogColors);
-        }
-        this.setState(() => {
+    updateColors(animalType, values) {
+        this.setState((oldState) => {
+            let newColorsStatus = new Map(oldState.colorsStatus);
+            newColorsStatus.set(animalType, values);
             return {
-                colors: colors
+                colorsStatus: newColorsStatus
             };
         });
     }
 
-    createQuery() {
-        const query = new Query(
-            this.state.name,
-            this.state.dogChecked,
-            this.state.catChecked,
-            this.state.breeds,
-            this.state.colors,
-            this.state.showDeadAnimals,
-        );
-        this.props.sendQuery(query);
-    }
+    // createQuery() {
+    //     const query = new Query(
+    //         this.state.name,
+    //         this.state.dogChecked,
+    //         this.state.catChecked,
+    //         this.state.breeds,
+    //         this.state.colors,
+    //         this.state.showDeadAnimals,
+    //     );
+    //     this.props.sendQuery(query);
+    // }
 
     render() {
         return (
             <div>
                 <AnimalNames
                     names={this.props.names}
+                    updateName={this.updateName}
                 />
                 <h3>Animal types</h3>
                 <AnimalTypes
-                    dogChecked={this.state.dogChecked}
-                    catChecked={this.state.catChecked}
-                    updateDogCheck={() => this.updateDogCheck()}
-                    updateCatCheck={() => this.updateCatCheck()}
+                    typesStatus={this.props.typesStatus}
+                    updateTypeCheck={this.updateTypeCheck}
                 />
                 <h3>Animal genders</h3>
-                <AnimalGenders/>
-                <ShowDeadAnimals />
+                <AnimalGenders
+                    gendersStatus={this.props.gendersStatus}
+                    updateGenderCheck={this.updateGenderCheck}
+                />
+                <ShowDeadAnimals 
+                    updateShowDeadAnimals={this.updateShowDeadAnimals}
+                />
                 <div>
                     <div>
                         <h3>Breeds</h3>
-                        <AnimalAttribute
-                            catAttributeValues={this.props.catBreeds}
-                            dogAttributeValues={this.props.dogBreeds}
-                            attributeName={'breeds'}
-                            dogChecked={this.state.dogChecked}
-                            catChecked={this.state.catChecked}
-                        />
+                        {Array.from(this.props.typesStatus.keys()).map(type => (
+                            <AnimalAttribute key={type}
+                                animalAttributeValues={this.props.breeds.get(type)}
+                                attributeName={'Breeds'}
+                                animalChecked={true}
+                                animalType={type}
+                                updateAttribute={this.updateBreeds}
+                            />
+                        ))}
                     </div>
                     <div>
                         <h3>Colors</h3>
-                        <AnimalAttribute
-                            catAttributeValues={this.props.catColors}
-                            dogAttributeValues={this.props.dogColors}
-                            attributeName={'colors'}
-                            dogChecked={this.state.dogChecked}
-                            catChecked={this.state.catChecked}
-                        />
+                        {Array.from(this.props.typesStatus.keys()).map(type => (
+                            <AnimalAttribute
+                                animalAttributeValues={this.props.colors.get(type)}
+                                attributeName={'Colors'}
+                                animalChecked={true}
+                                animalType={type}
+                                updateAttribute={this.updateColors}
+                            />
+                        ))}
                     </div>
                 </div>
-                <MuiThemeProvider>
+                {/* <MuiThemeProvider>
                     <RaisedButton label="Submit" style={style}
-                        onClick={() => this.createQuery()}
+                        onClick={this.createQuery()}
                     />
-                </MuiThemeProvider>
+                </MuiThemeProvider> */}
             </div>
         );
     }
 }
 
-class Query {
-    constructor(name, dogChecked, catChecked, gender, breeds, colors, showDeadAnimals) {
-        this.state.name = name,
-        this.state.dogChecked = dogChecked,
-        this.state.catChecked = catChecked,
-        this.state.gender = gender,
-        this.state.breeds = breeds,
-        this.state.colors = colors,
-        this.state.showDeadAnimals = showDeadAnimals
-    }
-}
-  
+// class Query {
+//     constructor(name, dogChecked, catChecked, gender, breeds, colors, showDeadAnimals) {
+//             this.state.name = name,
+//             this.state.dogChecked = dogChecked,
+//             this.state.catChecked = catChecked,
+//             this.state.gender = gender,
+//             this.state.breeds = breeds,
+//             this.state.colors = colors,
+//             this.state.showDeadAnimals = showDeadAnimals
+//     }
+// }
