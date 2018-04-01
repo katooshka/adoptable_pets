@@ -1,0 +1,21 @@
+body {
+    font-family : 'Roboto', sans-serif;
+}
+
+.panel {
+    background-color: white;
+    padding: 16px;
+}
+
+.pet-card {
+    margin: 16px 0;
+}
+
+.panel-heading {
+    padding: 16px;
+    background-color: green;
+}
+
+body {
+    background-color: whitesmoke;
+}

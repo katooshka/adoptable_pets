@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { SearchOptions } from './SearchOptions.js';
 import { SearchResults } from './SearchResults.js';
+import { Header } from './Header.js';
 
 export class Main extends React.Component {
     constructor(props) {
@@ -79,19 +80,30 @@ export class Main extends React.Component {
             return <div>Loading...</div>
         }
         return (
-            <div>
-                <SearchOptions
-                    names={this.state.names}
-                    typesStatus={this.state.typesStatus}
-                    gendersStatus={this.state.gendersStatus}
-                    colors={this.state.colors}
-                    breeds={this.state.breeds}
-                    showDeadAnimals={this.state.showDeadAnimals}
-                    getSearchOptions={this.getSearchOptions}
-                />
-                <SearchResults
-                    queryResult={this.state.queryResult}
-                />
+            <div className="row">
+                <div className="col-xs-0 col-sm-1 col-lg-2"></div>
+                <div className="col-xs-12 col-sm-10 col-lg-8">
+                    <div className="panel-heading">
+                        <h1>Adoptable Pets</h1>
+                    </div>
+                    <div className="panel panel-default">
+                        <div className="panel-body"></div>
+                        <SearchOptions
+                            names={this.state.names}
+                            typesStatus={this.state.typesStatus}
+                            gendersStatus={this.state.gendersStatus}
+                            colors={this.state.colors}
+                            breeds={this.state.breeds}
+                            showDeadAnimals={this.state.showDeadAnimals}
+                            getSearchOptions={this.getSearchOptions}
+                        />
+                        <h1>Search Results:</h1>
+                        <SearchResults
+                            queryResult={this.state.queryResult}
+                        />
+                    </div>
+                </div>
+                <div className="col-xs-0 col-sm-2 col-lg-2"> </div>
             </div>
         );
     }

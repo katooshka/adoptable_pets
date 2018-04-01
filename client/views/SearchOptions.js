@@ -81,7 +81,7 @@ export class SearchOptions extends React.Component {
         this.setState((oldState) => {
             let newBreedsStatus = new Map(oldState.breedsStatus);
             newBreedsStatus.set(animalType, values);
-            console.log("BREEDS", newBreedsStatus);            
+            console.log("BREEDS", newBreedsStatus);
             return {
                 breedsStatus: newBreedsStatus
             };
@@ -155,26 +155,30 @@ export class SearchOptions extends React.Component {
     render() {
         return (
             <div>
-                <AnimalNames
-                    names={this.props.names}
-                    updateName={this.updateName}
-                />
-                <h3>Animal types</h3>
-                <AnimalTypes
-                    typesStatus={this.props.typesStatus}
-                    updateTypeCheck={this.updateTypeCheck}
-                />
-                <h3>Animal genders</h3>
-                <AnimalGenders
-                    gendersStatus={this.props.gendersStatus}
-                    updateGenderCheck={this.updateGenderCheck}
-                />
-                <ShowDeadAnimals
-                    updateShowDeadAnimals={this.updateShowDeadAnimals}
-                />
-                <div>
-                    <div>
-                        <h3>Breeds</h3>
+                <div className="row">
+                    <div className="col-md-6 col-lg-4">
+                        <h3>Pet name</h3>
+                        <AnimalNames
+                            names={this.props.names}
+                            updateName={this.updateName}
+                        />
+                    </div>
+                    <div className="col-md-6 col-lg-4">
+                        <h3>Pet type</h3>
+                        <AnimalTypes
+                            typesStatus={this.props.typesStatus}
+                            updateTypeCheck={this.updateTypeCheck}
+                        />
+                    </div>
+                    <div className="col-md-6 col-lg-4">
+                        <h3>Pet gender</h3>
+                        <AnimalGenders
+                            gendersStatus={this.props.gendersStatus}
+                            updateGenderCheck={this.updateGenderCheck}
+                        />
+                    </div>
+                    <div className="col-md-6 col-lg-4">
+                        <h3>Pet breed</h3>
                         {Array.from(this.props.typesStatus.keys()).map(type => (
                             <AnimalAttribute key={type}
                                 animalAttributeValues={this.props.breeds.get(type)}
@@ -185,8 +189,8 @@ export class SearchOptions extends React.Component {
                             />
                         ))}
                     </div>
-                    <div>
-                        <h3>Colors</h3>
+                    <div className="col-md-6 col-lg-4">
+                        <h3>Pet color</h3>
                         {Array.from(this.props.typesStatus.keys()).map(type => (
                             <AnimalAttribute key={type}
                                 animalAttributeValues={this.props.colors.get(type)}
@@ -197,16 +201,28 @@ export class SearchOptions extends React.Component {
                             />
                         ))}
                     </div>
+                    <div className="col-md-6 col-lg-4">
+                        <ShowDeadAnimals
+                            updateShowDeadAnimals={this.updateShowDeadAnimals}
+                        />
+                    </div>
                 </div>
-                <MuiThemeProvider>
-                    <RaisedButton
-                        label="Submit"
-                        style={style}
-                        onClick={this.createQuery}
-                        disabled={!this.state.name && this.checkNoAnimalTypeAndGenderIsChosen()}
-                    />
-                </MuiThemeProvider>
-            </div>
+
+                <div className="row">
+                    <div className="col-xs-0 col-sm-1 col-lg-2"></div>
+                    <div className="col-xs-12 col-sm-10 col-lg-8">
+                        <MuiThemeProvider>
+                            <RaisedButton
+                                label="Find pets"
+                                style={style}
+                                onClick={this.createQuery}
+                                disabled={!this.state.name && this.checkNoAnimalTypeAndGenderIsChosen()}
+                            />
+                        </MuiThemeProvider>
+                    </div>
+                    <div className="col-xs-0 col-sm-1 col-lg-2"></div>
+                </div>
+            </div >
         );
     }
 }

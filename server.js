@@ -4,6 +4,7 @@ import { MongoClient } from 'mongodb';
 
 const PORT = 7700;
 const PUBLIC_PATH = __dirname + '/public';
+const STATIC_PATH = __dirname + '/static';
 const dbURL = 'mongodb://localhost:27017';
 const dbName = 'pets';
 const collectionName = 'pets';
@@ -26,6 +27,8 @@ const isDevelopment = process.env.NODE_ENV === 'development';
     app.use(express.static(PUBLIC_PATH));
   }
 
+  app.use(express.static(STATIC_PATH));
+
   app.get("/get-data", async function (req, res) {
     const docs = await getInitialData(dbURL);
     res.send(docs);
@@ -34,10 +37,6 @@ const isDevelopment = process.env.NODE_ENV === 'development';
   app.get("/get-animals", async function (req, res) {
     const docs = await getAnimals(dbURL, req.query);
     res.send(docs);
-  });
-
-  app.all("*", function (req, res) {
-    res.sendFile(path.resolve(PUBLIC_PATH, 'index.html'));
   });
 
   async function getAnimals(dbUrl, query) {
