@@ -7,41 +7,66 @@ import { SearchResults } from './SearchResults.js';
 export class Main extends React.Component {
     constructor(props) {
         super(props);
-        let typesStatus = new Map();
-        typesStatus.set('Dog', true);
-        typesStatus.set('Cat', true);
+        // let typesStatus = new Map();
+        // typesStatus.set('Dog', true);
+        // typesStatus.set('Cat', true);
 
-        let gendersStatus = new Map();
-        gendersStatus.set('Male', true);
-        gendersStatus.set('Female', true);
+        // let gendersStatus = new Map();
+        // gendersStatus.set('Male', true);
+        // gendersStatus.set('Female', true);
 
-        let breeds = new Map();
-        breeds.set('Dog', ["Pit Bull", "Bull dog", "Hot dog"]);
-        breeds.set('Cat', ["Domestic Shorthair", "Domestic Mediumhair", "Ragdoll", "Maine Coon"]);
+        // let breeds = new Map();
+        // breeds.set('Dog', ["Pit Bull", "Bull dog", "Hot dog"]);
+        // breeds.set('Cat', ["Domestic Shorthair", "Domestic Mediumhair", "Ragdoll", "Maine Coon"]);
 
-        let colors = new Map();
-        colors.set('Dog', ["Tricolor", "Black", "Brown"]);
-        colors.set('Cat', ["Tabby", "Black", "White"]);
+        // let colors = new Map();
+        // colors.set('Dog', ["Tricolor", "Black", "Brown"]);
+        // colors.set('Cat', ["Tabby", "Black", "White"]);
         this.state = {
-            names: ["Keks", "Timka", "Alba", "Richi", "Rom", "Tim", "Timofey", "Timosha", "Cooper"],
-            colors: colors,
-            breeds: breeds,
+            // names: ["Keks", "Timka", "Alba", "Richi", "Rom", "Tim", "Timofey", "Timosha", "Cooper"],
+            names: null,
+            colors: null,
+            breeds: null,
             showDeadAnimals: false,
-            typesStatus: typesStatus,
-            gendersStatus: gendersStatus,
+            typesStatus: null,
+            gendersStatus: null,
             queryResultFetched: false,
             queryResult: "Find animals"
         };
         this.getSearchOptions = this.getSearchOptions.bind(this);
     }
 
+    async componentDidMount() {
+        const response = await axios.get('/get-data');
+        if (response.status !== 200) {
+            throw new Error('Bad response', response);
+        }
+        const responseData = response.data;
+
+        let typesStatus = new Map();
+        for (let type of responseData.types) {
+            typesStatus.set(type, true);
+        }
+        let gendersStatus = new Map();
+        for (let gender of responseData.genders) {
+            gendersStatus.set(gender, true);
+        }
+        this.setState({
+            names: responseData.names,
+            colors: new Map(responseData.colors),
+            breeds: new Map(responseData.breeds),
+            gendersStatus: gendersStatus,
+            typesStatus: typesStatus
+        });
+    }
+
     async getSearchOptions(query) {
-        const pets = await this.getPetsData('/get-animals', query);
+        const pets = await this.getSearchResults('/get-animals', query);
         console.log("PETS DATA", pets.data);
         this.setState({ queryResult: pets.data });
     }
 
-    async getPetsData(path, query) {
+    async getSearchResults(path, query) {
         try {
             const params = {
                 showDeadAnimals: query.showDeadAnimals,
@@ -66,6 +91,9 @@ export class Main extends React.Component {
     }
 
     render() {
+        if (this.state.names === null) {
+            return <div>Loading...</div>
+        }
         return (
             <div>
                 <SearchOptions
