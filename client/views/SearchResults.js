@@ -11,6 +11,7 @@ export class SearchResults extends React.Component {
 
   render() {
     const pets = this.props.queryResult;
+    let image = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
     if (pets !== "Find animals") {
       return (
         <div>
@@ -21,7 +22,7 @@ export class SearchResults extends React.Component {
                 <CardMedia
                   overlay={<CardTitle title={pet.animalName} subtitle={pet.animalType} />}
                 >
-                  <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="No img" />
+                  <img src={pet.image} alt="Image not found" />
                 </CardMedia>
                 <CardText>
                  <ul>

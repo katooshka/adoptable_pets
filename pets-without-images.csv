@@ -1,0 +1,413 @@
+animalId,animalName,animalType,animalGender,animalBreed,animalColor,address,isDead
+A513771,Unknown,Dog,Unknown,Golden Retriever,Black / White,22000 238TH PL SE,TRUE
+A513743,Unknown,Dog,Male,Samoyed,White,22400 8TH AVE S,FALSE
+A516014,Evee,Dog,Female,English Springer Spaniel,Unknown,700 WOODLAND WAY,FALSE
+A514724,Lily,Cat,Female,Domestic Shorthair,Unknown,20800 31ST LN S. #A SEA TAC,FALSE
+A514712,Oscar,Cat,Male,Domestic Mediumhair,Unknown,178TH AVE NE AND NE 8TH PL,FALSE
+A514516,Bernard,Cat,Male,Turkish Van,Unknown,35500 28TH AVE S,FALSE
+A515486,Emmett,Cat,Male,Domestic Mediumhair,Unknown,47500 288TH AVE SE,FALSE
+A515182,Unknown,Dog,Female,Shiba Inu,Unknown,34400 214TH AVE SE,FALSE
+A513768,Jackson/Jax,Cat,Male,Russian Blue,Unknown,228TH ST SE,FALSE
+A513744,Hernie,Cat,Male,American Shorthair,Unknown,21300 82ND AVE SE,FALSE
+A515140,Moxie,Dog,Female,Flat Coat Retriever,Unknown,3300 SW 332ND ST,FALSE
+A513765,Loki,Dog,Male,Pit Bull,Unknown,SUPERMALL DRIVE AT MCDONALDS,FALSE
+A515011,Pritten,Cat,Female,Domestic Shorthair,Unknown,NE 70TH STREET,FALSE
+A515751,Shelly,Dog,Female,Miniature Pinscher,Unknown,1300 U ST NW,FALSE
+A513896,Coco,Dog,Female,Pekingese,Unknown,11200 SE 260TH ST,FALSE
+A516112,Unknown,Cat,Male,Domestic Mediumhair,White / Brown,12800 SE 282ND WAY,FALSE
+A516217,Cooper,Dog,Male,Pug,Unknown,7700 NE 167TH ST,FALSE
+A516107,Unknown,Cat,Unknown,American Wirehair,Unknown,Unknown,TRUE
+A515931,Unknown,Dog,Male,Pug,Black,24800 128TH PL SE,FALSE
+A513736,Charlie,Dog,Male,Labrador Retriever,Unknown,33000 37TH CT SW,FALSE
+A513763,Unknown,Dog,Male,Labrador Retriever,Black,21200 142ND AVE SE,FALSE
+A514736,Sky,Dog,Male,Pit Bull,Unknown,18400 42ND AVE S,FALSE
+A516136,Corah,Cat,Female,Maine Coon,Unknown,Unknown,FALSE
+A516117,Mako,Cat,Male,Ragdoll,Unknown,25TH AND SPOKANE ST IN BEACON HILL,FALSE
+A515232,Sophie,Dog,Female,Shih Tzu,Unknown,PINE CREST CIRCLE,FALSE
+A513067,Unknown,Dog,Female,German Shepherd,Black / Brown,26200 33RD AVE S,FALSE
+A514744,Unknown,Cat,Female,Domestic Longhair,Brown / Unknown,16900 SE 138TH ST,FALSE
+A515184,Unknown,Cat,Female,Maine Coon,Unknown,11600 BEACON AVE S,FALSE
+A514743,Theo,Cat,Male,Domestic Shorthair,Unknown,93RD AVE NE,FALSE
+A515141,Unknown,Dog,Male,Pomeranian,Brown / White,11020 SE KENT KANGLEY RD APT CC202,FALSE
+A514710,Murphy,Dog,Male,Labrador Retriever,Unknown,9700 NE 124TH PL,FALSE
+A513370,Balee,Cat,Female,Domestic Shorthair,Unknown,MAPLEWOOD HEIGHTS,FALSE
+A516022,Unknown,Dog,Female,Labrador Retriever,White / Unknown,Unknown,FALSE
+A515928,Unknown,Dog,Male,Miniature Poodle,Black / Black,Unknown,FALSE
+A515251,Unknown,Dog,Female,Pomeranian,Black / White,22307 DOCK AVE - DES MOINES PIER PARK,FALSE
+A513758,Unknown,Dog,Female,Golden Retriever,Unknown,ENATAI AREA / KILLARNEY CIRCLE  102ND PL,FALSE
+A513425,Unknown,Dog,Female,Chihuahua - Long Haired,Black / Brown,800 W VALLEY HWY,FALSE
+A515682,White Kitty,Cat,Female,American Shorthair,Unknown,SE 177TH PL,FALSE
+A513802,Sophie,Cat,Female,Domestic Shorthair,Unknown,14862 100TH AVE SE,FALSE
+A514910,Mel,Cat,Female,Persian,Unknown,10105 NE 134TH LN APT M103 KIRKLAND WA 9,FALSE
+A514726,Boo,Cat,Male,Domestic Shorthair,Unknown,22400 NE MARKETPLACE DR,FALSE
+A517104,Ozzie,Cat,Male,American Shorthair,Unknown,16028 SE 46 PL.,FALSE
+A513096,Gromit,Dog,Male,German Shepherd,Unknown,WAX ROAD,FALSE
+A514517,Robert,Cat,Male,Domestic Mediumhair,Unknown,WILDWOOD APARTMENT COMPLEX,FALSE
+A516440,Unknown,Dog,Unknown,Rough Collie,Brown / White,216TH ST AND ISSAQUAH HOBART RD,FALSE
+A515157,Summit,Dog,Female,Labrador Retriever,Unknown,2600 NW 56TH ST,FALSE
+A515178,Unknown,Dog,Female,German Shepherd,Black,SE 256TH AND 124TH AVE SE INTERSECTION,FALSE
+A513716,Quincy,Dog,Female,Golden Retriever,Unknown,18700 EDGECLIFF DR SW,FALSE
+A515179,Unknown,Dog,Male,Pit Bull,Brown / White,SHOREWOOD HS N 170TH AND FREMONT AVE N,FALSE
+A515689,White Kitty,Cat,Female,American Shorthair,Unknown,SE 177TH PL,FALSE
+A515745,Sparky,Dog,Male,German Shepherd,Unknown,26830 86TH AVE S,FALSE
+A514742,Unknown,Dog,Female,American Pit Bull Terrier,White,FACTORIA MALL,FALSE
+A514479,Appolo,Dog,Male,Shiba Inu,Unknown,6600 NE 202ND ST,FALSE
+A514901,Unknown,Cat,Male,Domestic Longhair,Unknown,16300 LINDEN AVE N,FALSE
+A516057,Unknown,Dog,Male,Shih Tzu,White / White,10611 39TH SW,FALSE
+A516229,Angel,Dog,Female,Labrador Retriever,Unknown,16TH NE LANE,FALSE
+A515172,Hunter,Dog,Male,Beagle,Unknown,32200 39TH AVE S,FALSE
+A513899,Yukidama,Cat,Female,Turkish Angora,Unknown,CUL DE SAC OF 116TH/MERIDIAN,FALSE
+A516455,Bonk,Cat,Male,Domestic Shorthair,Unknown,7400 COTTONWOOD DR SE,FALSE
+A515698,Sugar,Cat,Male,American Shorthair,Unknown,SW 304TH IN YARD OF HOME,FALSE
+A516390,Aslan,Dog,Male,Maltese,Unknown,7000 20TH AVE NE,FALSE
+A515570,Unknown,Dog,Female,Toy Poodle,White,4200 137TH AVE NE,FALSE
+A516138,Unknown,Dog,Unknown,Rottweiler,Black / Brown,1000 258TH AVE NE,FALSE
+A514478,Unknown,Dog,Unknown,Australian Shepherd,White / Black,176TH AVE SE AND SE 295TH ST,FALSE
+A515144,Summit,Dog,Female,Labrador Retriever,Unknown,105TH AND 8TH AVE NW,FALSE
+A514692,Biff,Dog,Male,Brittany,Unknown,8100 NE 141ST ST,FALSE
+A513753,Unknown,Dog,Unknown,Toy Poodle,Black,1200 N 152ND ST,FALSE
+A515129,Tennessee,Dog,Male,Golden Retriever,Unknown,2800 NE LOGAN ST,FALSE
+A515799,Unknown,Dog,Male,Brittany,Brown / White,00 4TH AVE S,FALSE
+A515142,Unknown,Dog,Male,Pomeranian,Brown / White,11020 SE KENT KANGLEY RD APT CC202,FALSE
+A516075,Brodie,Cat,Male,American Shorthair,Unknown,14900 97TH AVE E,FALSE
+A515153,Unknown,Dog,Male,Chihuahua - Smooth Coated,White,Unknown,FALSE
+A514727,Sootie,Cat,Unknown,Domestic Mediumhair,Unknown,5700 200TH ST SW,FALSE
+A514913,Rust,Dog,Male,Dachshund - Long-Haired,Unknown,152ND AND KENT KANGLEY,FALSE
+A515090,Rosie,Cat,Female,Domestic Shorthair,Unknown,2800 S 148TH ST,FALSE
+A515151,Unknown,Dog,Male,German Shepherd / Mix,Brown,2100 N 161ST PL,FALSE
+A516116,Gemma,Cat,Female,Domestic Shorthair,Unknown,15200 263RD AVE SE,FALSE
+A513745,Unknown,Dog,Male,Miniature Poodle,White,Unknown,FALSE
+A514667,Mimi,Cat,Male,Bombay,Unknown,21200 SE 34TH ST,FALSE
+A515929,Unknown,Dog,Male,Miniature Poodle,Black / Black,Unknown,FALSE
+A514958,Unknown,Cat,Male,Maine Coon,Black / Brown,Unknown,FALSE
+A513752,Unknown,Cat,Male,Domestic Longhair,Unknown,3300 WARD CT,FALSE
+A515690,Lily,Cat,Female,Domestic Shorthair,Unknown,6700 121ST PL SE,FALSE
+A516137,Corah,Cat,Female,Maine Coon,Unknown,Unknown,FALSE
+A516056,Unknown,Dog,Female,Miniature Schnauzer,White,10611 39TH SW,FALSE
+A513737,Charlie,Dog,Male,Labrador Retriever,Unknown,33000 37TH CT SW,FALSE
+A515565,Doc Holliday,Cat,Male,Russian Blue,Unknown,14TH AVE S AND S 270TH ST,FALSE
+A515010,Gosha,Cat,Male,Siamese,Unknown,228TH AVE NE,FALSE
+A516925,Stubby,Cat,Male,Egyptian Mau,Unknown,HOLDEN SW,FALSE
+A517331,Fiyero,Dog,Male,Yorkshire Terrier,Unknown,KENMORE,FALSE
+A517333,Bob,Dog,Male,Cardigan Welsh Corgi,Unknown,16135 SE 145TH PL,FALSE
+A517334,Mia,Dog,Female,Chihuahua - Smooth Coated,Unknown,16135 SE 145TH PL,FALSE
+A516615,Penny,Cat,Female,Siamese,Unknown,16045 147TH PL NE,FALSE
+A516725,Sulu,Cat,Male,Domestic Shorthair,Unknown,"6450 NE 186TH ST KENMORE, WA",FALSE
+A517168,Unknown,Cat,Male,Domestic Shorthair,White,5107 MACBETH DRIVE,FALSE
+A517162,Ekko,Dog,Female,Labrador Retriever,Unknown,N. 30TH ST AND FIR STREET,FALSE
+A516540,Unknown,Dog,Male,Standard Schnauzer,Unknown,Unknown,FALSE
+A516786,Buddy,Cat,Male,Domestic Shorthair,Unknown,7800 NE 28TH ST,FALSE
+A516691,Unknown,Dog,Female,Pug,Brown,21215 INTERNATIONAL BLVD,FALSE
+A517279,Princess,Dog,Female,Shih Tzu,Unknown,SE 192ND NEAR SOOS CREEK AND BENSON HILL,FALSE
+A517164,Unknown,Cat,Female,Domestic Shorthair,Brown / Black,Unknown,FALSE
+A517301,Cody,Dog,Male,Australian Shepherd,Unknown,POSS. SEEN SE 208 ST/ISSA-HOBART RD,FALSE
+A517147,Unknown,Cat,Female,Domestic Mediumhair,Unknown,Unknown,FALSE
+A516692,Pinky,Dog,Female,Whippet,Unknown,14106 NE 62ND ST,FALSE
+A516896,Doki,Dog,Male,Yorkshire Terrier,Unknown,S 278TH ST,FALSE
+A517166,Unknown,Dog,Male,Labrador Retriever,Black,NE 103RD CT AND 181ST AVE NE.,FALSE
+A517105,Cornelius,Dog,Male,Yorkshire Terrier,Unknown,MARYMOORE PARK,FALSE
+A516899,Buddy,Cat,Male,Domestic Shorthair,Unknown,4527 172ND AVE SE,FALSE
+A516718,Sulu,Cat,Male,Domestic Shorthair,Unknown,6450 NE 186TH ST,FALSE
+A517065,Ralph,Cat,Male,Domestic Mediumhair,Unknown,18530 SE 258TH,FALSE
+A517120,Cody,Dog,Male,Australian Shepherd,Unknown,216TH AVE SE WOODS ABOVE CEDAR RIVER,FALSE
+A517276,Tigger,Cat,Neutered Male,Domestic Shorthair,Brn Tabby,24600 RUSSELL RD S,FALSE
+A514734,Sweetman,Cat,Neutered Male,Domestic Longhair,Brn Tabby / White,19600 SE 260TH ST,FALSE
+A516997,Miss Kitty,Cat,Spayed Female,Domestic Shorthair,Black / White,3000 S 204TH ST,FALSE
+A512409,Quincy,Cat,Neutered Male,Domestic Shorthair,Black,23900 SE KENT KANGLEY RD,FALSE
+A516266,Angel,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,12040 NE 85TH ST,FALSE
+A517137,Frankie,Cat,Neutered Male,Domestic Shorthair,Org Tabby,12040 NE 85TH ST,FALSE
+A515665,Moby,Dog,Neutered Male,Chihuahua - Smooth Coated,Tricolor,1000 CENTRAL AVE N,FALSE
+A500367,Norma,Cat,Spayed Female,Domestic Shorthair,Dilute Tor,21615 64TH AVE S,FALSE
+A516374,Unknown,Cat,Neutered Male,Domestic Shorthair,Black / White,3100 HUNTER CT,FALSE
+A503767,Oly,Cat,Neutered Male,Domestic Shorthair,Org Tabby,Unknown,FALSE
+A517000,Obie,Cat,Male,Domestic Shorthair,Unknown,84TH AVE NE & NE 138TH ST,FALSE
+A516863,Liam,Cat,Male,Domestic Shorthair,Unknown,CORNER OF 109TH PL NE & NE 45TH ST,FALSE
+A517103,Unknown,Cat,Neutered Male,Domestic Shorthair,Gray / White,23700 111TH PL SE,FALSE
+A516118,Cutie,Cat,Spayed Female,American Shorthair,Black,10000 18TH AVE SW,FALSE
+A517022,Unknown,Cat,Female,Domestic Shorthair,Gray,21600 64TH AVE S,FALSE
+A516982,Atty,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,Unknown,FALSE
+A516386,Kingsly,Cat,Neutered Male,Domestic Shorthair,Black,Unknown,FALSE
+A516739,Unknown,Bird,Female,Chicken,White / Black,21600 64TH AVE S,FALSE
+A515789,Unknown,Cat,Neutered Male,Domestic Shorthair,Blk Smoke,Unknown,FALSE
+A515112,Cloud,Rabbit,Spayed Female,Rabbit,White,Unknown,FALSE
+A516796,Unknown,Cat,Spayed Female,Domestic Shorthair,Brn Tabby / White,28200 SE 424TH ST,FALSE
+A516009,Unknown,Cat,Spayed Female,Domestic Shorthair,Brn Tabby / Tortie,16800 34TH AVE S,FALSE
+A517034,Lacey,Dog,Spayed Female,Chihuahua - Smooth Coated,Brown / Black,23300 100TH AVE SE,FALSE
+A507893,Vera,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,10000 18TH AVE SW,FALSE
+A407026,Kiki,Cat,Spayed Female,Domestic Shorthair,Black,21615 64TH AVE S,FALSE
+A516106,Unknown,Cat,Male,Domestic Shorthair,Black,15400 53RD AVE S,TRUE
+A435579,Lilly,Cat,Spayed Female,Domestic Shorthair,Blue / White,21615 64TH AVE S,FALSE
+A515112,Cloud,Rabbit,Spayed Female,Rabbit,White,21615 64TH AVE S,FALSE
+A467465,Petal,Cat,Spayed Female,Domestic Longhair,Black / White,21615 64TH AVE S,FALSE
+A517309,Unknown,Dog,Female,Border Collie / Mix,Brown / White,200 SW ROXBURY ST,FALSE
+A517052,Unknown,Cat,Male,Domestic Longhair,Black,25600 29TH AVE S,FALSE
+A516008,Cassidy,Cat,Spayed Female,Domestic Shorthair,Tortie / White,16800 34TH AVE S,FALSE
+A516604,Mason,Dog,Male,American Pit Bull Terrier,Unknown,SE 214TH ST & 120TH AVE. SE,FALSE
+A516634,Unknown,Cat,Female,Domestic Shorthair,Tortie,3000 S 253RD ST,FALSE
+A516241,Rambo,Cat,Neutered Male,Domestic Shorthair,Black / White,3700 S 256TH CT,FALSE
+A516793,Unknown,Cat,Spayed Female,Domestic Shorthair,Black,11100 SE 256TH ST,FALSE
+A517121,Unknown,Cat,Spayed Female,Domestic Mediumhair / Siamese,White / Seal Pt,14000 24TH AVE S,FALSE
+A516744,Baley,Cat,Neutered Male,Domestic Shorthair,Black / White,Unknown,FALSE
+A514568,Lulu,Cat,Spayed Female,Domestic Shorthair,Gray / White,Unknown,TRUE
+A516523,Unknown,Cat,Male,Domestic Shorthair,Gray,3700 S 170TH ST,FALSE
+A516744,Baley,Cat,Neutered Male,Domestic Shorthair,Black / White,15500 SE GREEN VALLEY RD,FALSE
+A512586,Missy,Cat,Spayed Female,Domestic Shorthair,White / Black,Unknown,FALSE
+A517270,Unknown,Dog,Male,Chow Chow / Akita,Tan / Gray,11000 SE KENT KANGLEY RD,FALSE
+A515790,Unknown,Cat,Neutered Male,Domestic Shorthair,Black / White,Unknown,FALSE
+A473316,Buster,Dog,Neutered Male,Labrador Retriever / Mix,Apricot,Unknown,FALSE
+A449967,Penny,Cat,Spayed Female,Domestic Shorthair,Calico,21615 64TH AVE S,FALSE
+A517021,Unknown,Cat,Spayed Female,Domestic Shorthair,Gray,21600 64TH AVE S,FALSE
+A514735,Jack,Cat,Neutered Male,Domestic Shorthair,Black / White,12040 NE 85TH ST,FALSE
+A517155,Unknown,Cat,Female,Domestic Longhair,Gray Tabby,26000 186TH PL SE,FALSE
+A517143,Juno,Dog,Male,Siberian Husky,Red,30400 38TH AVE S,FALSE
+A516868,Unknown,Cat,Female,Domestic Shorthair,Black,13400 MARTIN LUTHER KING JR WAY S,FALSE
+A516892,Buster,Dog,Neutered Male,Labrador Retriever / Pit Bull,Chocolate,25400 109TH CT SE,FALSE
+A515966,Shadow,Cat,Male,Russian Blue,Unknown,NE 141ST STREET & 84TH AVENUE NE,FALSE
+A517335,Smoky,Cat,Male,Domestic Mediumhair,Unknown,387TH AND 244TH,FALSE
+A516015,Gingerbread,Dog,Spayed Female,Pug / Mix,Fawn / Black,14000 SE 240TH ST,FALSE
+A516746,Lisa,Cat,Spayed Female,Domestic Shorthair,Gray,15500 SE GREEN VALLEY RD,FALSE
+A516118,Cutie,Cat,Spayed Female,American Shorthair,Black,Unknown,FALSE
+A516892,Buster,Dog,Neutered Male,Labrador Retriever / Pit Bull,Chocolate,Unknown,FALSE
+A513804,Cooper,Cat,Neutered Male,Domestic Shorthair,Brn Tabby,Unknown,FALSE
+A515128,Unknown,Cat,Neutered Male,Domestic Shorthair,Black / White,19400 SAWYER RD,TRUE
+A515533,Unknown,Cat,Male,Domestic Shorthair,Choc Pt,800 SW 116TH ST,TRUE
+A480867,Clyde,Cat,Neutered Male,Domestic Shorthair,Orange / White,Unknown,FALSE
+A516759,Unknown,Cat,Female,Domestic Mediumhair,Brn Tabby / Black,7600 S 126TH ST,
+A509437,Brodie,Dog,Neutered Male,Pit Bull / Labrador Retriever,Br Brindle / White,Unknown,FALSE
+A516802,Unknown,Cat,Neutered Male,Domestic Shorthair,Brn Tabby,28200 SE 424TH ST,FALSE
+A513223,Sophie,Cat,Spayed Female,Siamese / Mix,Gray / White,21615 64TH AVE S,FALSE
+A517060,Unknown,Cat,Male,Domestic Shorthair,Black / White,10400 SE 206TH PL,FALSE
+A517139,Frannie,Cat,Spayed Female,Domestic Shorthair,Brn Tabby / White,12040 NE 85TH ST,FALSE
+A509731,Unknown,Cat,Neutered Male,Domestic Mediumhair,Brn Tabby,Unknown,FALSE
+A516632,Unknown,Cat,Male,Domestic Shorthair,Org Tabby / White,3000 S 253RD ST,FALSE
+A517163,Unknown,Dog,Female,Cocker Spaniel,Tan,20900 108TH AVE SE,FALSE
+A480867,Clyde,Cat,Neutered Male,Domestic Shorthair,Orange / White,21615 64TH AVE S,FALSE
+A515665,Moby,Dog,Neutered Male,Chihuahua - Smooth Coated,Tricolor,12040 NE 85TH ST,FALSE
+A509871,Gertie,Cat,Spayed Female,Domestic Longhair,Black,21615 64TH AVE S,FALSE
+A516241,Rambo,Cat,Neutered Male,Domestic Shorthair,Black / White,Unknown,FALSE
+A516791,Unknown,Cat,Neutered Male,Domestic Shorthair / Siamese,Seal Pt / White,11100 SE 256TH ST,FALSE
+A458659,Grandma,Cat,Spayed Female,Domestic Shorthair,Tortie,21615 64TH AVE S,FALSE
+A516266,Angel,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,2100 S 272ND ST,FALSE
+A512752,Bon Jovi,Cat,Spayed Female,Domestic Longhair,Dilute Tor,Unknown,FALSE
+A517251,Unknown,Dog,Female,Chihuahua - Smooth Coated,Tan / White,14700 NE 167TH ST,FALSE
+A516623,Unknown,Cat,Male,Domestic Shorthair,Black / White,25100 132ND AVE SE,FALSE
+A517263,Unknown,Cat,Male,Domestic Shorthair,Org Tabby / White,1400 MAPLE LN,FALSE
+A516689,Unknown,Cat,Male,Domestic Shorthair,Org Tabby,4200 S 158TH ST,FALSE
+A516801,Unknown,Cat,Spayed Female,Domestic Mediumhair,White / Brn Tabby,28200 SE 424TH ST,FALSE
+A516745,Bobby,Cat,Neutered Male,Domestic Shorthair,Black,Unknown,FALSE
+A516135,Unknown,Cat,Unknown,Domestic Longhair,Black / Brown,21ST AVESW & SW 356TH ST,FALSE
+A517275,Unknown,Dog,Male,Pit Bull,White / Brown,13200 SE 208TH ST,FALSE
+A517019,Unknown,Cat,Female,Domestic Shorthair,Black,21600 64TH AVE S,FALSE
+A511967,Sir Charles,Cat,Neutered Male,Domestic Shorthair,Gray Tabby,Unknown,FALSE
+A496205,Missy,Cat,Spayed Female,Domestic Mediumhair,White,21615 64TH AVE S,FALSE
+A514763,Unknown,Dog,Female,Yorkshire Terrier,Brown / Black,SE 183RD PL & 112TH AVE SE,FALSE
+A517125,Unknown,Cat,Neutered Male,Domestic Shorthair,Black / White,23200 88TH AVE S,FALSE
+A517096,Spencer,Dog,Neutered Male,Pit Bull / Boxer,Br Brindle / White,3900 236TH AVE NE,FALSE
+A516746,Lisa,Cat,Spayed Female,Domestic Shorthair,Gray,Unknown,FALSE
+A514476,Mischief,Cat,Male,Domestic Shorthair,Unknown,RENTON AVENUE S & HARDIE AVENUE SW,FALSE
+A517080,Unknown,Cat,Neutered Male,Domestic Mediumhair,White / Black,3300 S 170TH ST,FALSE
+A517332,Unknown,Cat,Neutered Male,Domestic Shorthair,Brn Tabby,21600 64TH AVE S,FALSE
+A515889,Unknown,Dog,Neutered Male,Labrador Retriever,Black,27900 122ND PL SE,TRUE
+A516124,Unknown,Dog,Male,Pomeranian,Black,18200 73RD AVE NE,TRUE
+A516965,Dempsey,Dog,Male,Pit Bull,Black,12500 50TH PL S,FALSE
+A516742,Unknown,Cat,Male,Domestic Shorthair,Black,15500 SE GREEN VALLEY RD,FALSE
+A516741,Unknown,Cat,Female,Domestic Shorthair,Black,15500 SE GREEN VALLEY RD,FALSE
+A517165,Unknown,Dog,Male,Chow Chow,Buff / Gray,26900 109TH PL SE,TRUE
+A516798,Unknown,Cat,Neutered Male,Domestic Longhair,Blk Smoke,28200 SE 424TH ST,FALSE
+A506784,Stoney,Cat,Neutered Male,Domestic Mediumhair,Gray / White,21615 64TH AVE S,FALSE
+A505007,Ash,Cat,Neutered Male,Domestic Shorthair,Black,21615 64TH AVE S,FALSE
+A517312,Unknown,Dog,Male,Miniature Poodle / Mix,White,25400 120TH PL SE,FALSE
+A516784,Unknown,Cat,Neutered Male,Domestic Longhair,Brn Tabby / White,3400 HAMPTON WAY,FALSE
+A517149,Unknown,Cat,Neutered Male,Domestic Shorthair,Brn Tabby / White,28400 168TH AVE SE,FALSE
+A517034,Unknown,Dog,Spayed Female,Chihuahua - Smooth Coated,Brown / Black,12040 NE 85TH ST,FALSE
+A515150,Unknown,Cat,Neutered Male,Domestic Shorthair,Brn Tabby,5300 SOUTHCENTER BLVD,TRUE
+A517053,Unknown,Cat,Female,Domestic Shorthair,Dilute Tor,25600 29TH AVE S,FALSE
+A517282,Russell,Cat,Neutered Male,Domestic Shorthair,Black / White,Unknown,FALSE
+A517313,Unknown,Dog,Female,Lhasa Apso / Mix,Brown / Tan,25400 120TH PL SE,FALSE
+A515138,Cream,Dog,Male,Pit Bull,Cream / White,1900 DIVISION ST,TRUE
+A515130,Unknown,Cat,Neutered Male,Domestic Mediumhair,Black,21300 120TH PL SE,TRUE
+A515131,Unknown,Cat,Male,Domestic Longhair,Brn Tabby,25200 REITH RD,TRUE
+A514904,Chip,Dog,Neutered Male,Yorkshire Terrier / Mix,Brown,Unknown,FALSE
+A515025,Tyler,Dog,Male,Chihuahua - Smooth Coated,Unknown,SW 120TH STREET & 4TH AVENUE SW,FALSE
+A516016,Reuben,Dog,Neutered Male,Miniature Schnauzer / Miniature Poodle,Black / White,14000 SE 240TH ST,FALSE
+A517096,Spencer,Dog,Neutered Male,Pit Bull / Boxer,Br Brindle / White,Unknown,FALSE
+A505004,Rosie,Cat,Spayed Female,Domestic Shorthair,Black,21615 64TH AVE S,FALSE
+A516792,Unknown,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,11100 SE 256TH ST,FALSE
+A517151,Unknown,Dog,Female,Papillon,White / Black,23600 60TH AVE S,FALSE
+A517131,Alley,Cat,Spayed Female,Domestic Shorthair,Calico,Unknown,FALSE
+A514690,Dancer,Cat,Spayed Female,Domestic Shorthair,Tortie,Unknown,FALSE
+A517018,Unknown,Cat,Spayed Female,Domestic Shorthair,Black,21600 64TH AVE S,FALSE
+A514735,Jack,Cat,Neutered Male,Domestic Shorthair,Black / White,19600 SE 260TH ST,FALSE
+A516804,Unknown,Cat,Spayed Female,Domestic Shorthair,Black,28200 SE 424TH ST,FALSE
+A260496,Rascal,Cat,Neutered Male,Domestic Mediumhair,White / Gray,Unknown,FALSE
+A517048,Unknown,Cat,Male,Domestic Shorthair,Apricot / White,25600 29TH AVE S,FALSE
+A516799,Unknown,Cat,Spayed Female,Domestic Shorthair,Brn Tabby,28200 SE 424TH ST,FALSE
+A516076,Star,Dog,Spayed Female,Chihuahua - Smooth Coated,Tan,4000 S 146TH ST,FALSE
+A516361,Jones,Cat,Neutered Male,Domestic Longhair,Brn Tabby,13300 NE 134TH PL,FALSE
+A515139,Donut,Cat,Neutered Male,Domestic Longhair,Orange / White,1900 DIVISION ST,TRUE
+A516425,Unknown,Dog,Male,Brussels Griffon,Brown,4TH AVENUE & BLANCHARD ST,FALSE
+A516738,Unknown,Bird,Male,Chicken,Red / Black,21600 64TH AVE S,FALSE
+A517315,Bear,Dog,Neutered Male,Australian Shepherd / Chesapeke Bay Retriever,Brown,25800 LAKE FENWICK RD,FALSE
+A517326,Unknown,Dog,Male,Pit Bull / Mix,White / Black,11300 SE KENT KANGLEY RD,FALSE
+A516386,Kingsly,Cat,Neutered Male,Domestic Shorthair,Black,26600 167TH PL SE,FALSE
+A516008,Cassidy,Cat,Spayed Female,Domestic Shorthair,Tortie / White,12040 NE 85TH ST,FALSE
+A516459,Unknown,Cat,Neutered Male,Domestic Mediumhair,Gray Tabby,800 2ND AVE N,FALSE
+A517099,Unknown,Cat,Male,Domestic Shorthair,Orange / White,18200 80TH AVE S,FALSE
+A516494,Unknown,Dog,Male,Chihuahua - Long Haired,White / Brown,SE 240TH PLACE & 112TH AVENUE SE,FALSE
+A517314,Unknown,Cat,Male,Domestic Shorthair,Brown / Black,3200 S 296TH PL,FALSE
+A509728,Unknown,Cat,Neutered Male,Domestic Shorthair,Black / White,Unknown,FALSE
+A517020,Unknown,Cat,Female,Domestic Shorthair,Gray,21600 64TH AVE S,FALSE
+A517129,Melvin,Cat,Neutered Male,Domestic Shorthair,Brn Tabby / White,Unknown,FALSE
+A517146,Fuego,Dog,Male,Chihuahua - Smooth Coated,Unknown,277TH AND MILITARY ROAD,FALSE
+A517261,Carlos,Dog,Male,Yorkshire Terrier,Unknown,20325 NE 186TH STREET,FALSE
+A517274,Smokey,Cat,Male,Domestic Mediumhair,Unknown,244TH AND 390TH,FALSE
+A517001,Arlo,Dog,Male,German Shepherd,Unknown,Unknown,FALSE
+A517157,Unknown,Dog,Male,Yorkshire Terrier,Brown,175TH AND SE 256TH STREET,FALSE
+A517153,Princess,Dog,Female,Shih Tzu,Unknown,SE 160TH ST AND 128TH ST,FALSE
+A516900,Buddy,Cat,Male,Domestic Shorthair,Unknown,4527 172ND AVE SE,FALSE
+A517028,Unknown,Cat,Male,American Shorthair,Unknown,FARWEST DR SW AND 120TH ST SW,FALSE
+A517033,Killian,Cat,Male,Domestic Shorthair,Unknown,6146 NE 152ND ST,FALSE
+A517066,Ralph,Cat,Male,Domestic Mediumhair,Unknown,15405 DES MOINES MEMORIAL DRIVE,FALSE
+A517156,Elvira,Cat,Female,Domestic Longhair,Unknown,BROADWAY AND PIKE,FALSE
+A517330,Pookie,Dog,Female,Pomeranian,Unknown,1307 JUNIPER DR. SE,FALSE
+A517161,Unknown,Cat,Male,Maine Coon,Unknown,ORILLA ROAD S,FALSE
+A517287,Unknown,Dog,Male,Labrador Retriever,Brown / Black,Unknown,FALSE
+A517079,Unknown,Dog,Male,Pit Bull,Brown / White,Unknown,FALSE
+A740325,Unknown,Dog,Female,Chihuahua Shorthair Mix,Black/Tan,E STASSNEY LN,FALSE
+A740324,Unknown,Dog,Spayed Female,Chihuahua Shorthair Mix,Tan,E STASSNEY LN,FALSE
+A740331,Unknown,Dog,Male,Chihuahua Shorthair Mix,Tan/White,E 16TH ST,FALSE
+A740328,Unknown,Cat,Male,Domestic Shorthair,Black/White,304 E 24TH ST,FALSE
+A740343,Unknown,Dog,Female,Labrador Retriever Mix,Black,W PALACE PKWY,FALSE
+A740342,Unknown,Cat,Male,Domestic Shorthair Mix,White/Black,DOORBELL,FALSE
+A735648,Unknown,Dog,Spayed Female,Pit Bull Mix,Black/White,4698 ELMONT DR,FALSE
+A740350,Unknown,Cat,Male,Domestic Shorthair Mix,Brown Tabby,6300 S CONGRESS AVE,FALSE
+A736577,Unknown,Dog,Neutered Male,Jack Russell Terrier Mix,Black/Brown,MAN O WAR DR,FALSE
+A740352,Unknown,Cat,Unknown,Domestic Shorthair Mix,Torbie,N LAMAR BLVD,FALSE
+A740370,Unknown,Dog,Female,Shih Tzu Mix,Apricot,E 51ST ST,FALSE
+A740379,Unknown,Cat,Female,Domestic Shorthair Mix,Black Tabby,15 SPONBERG DR,FALSE
+A740374,Unknown,Dog,Female,Labrador Retriever Mix,Yellow,1800 CONGRESS AVE,FALSE
+A740381,Unknown,Dog,Female,Australian Cattle Dog Mix,Black/White,10802 SAN JOSE AVE,FALSE
+A740389,Unknown,Cat,Female,Domestic Shorthair Mix,Calico,3501 WERNER,FALSE
+A740394,Unknown,Dog,Female,Chihuahua Shorthair/Labrador Retriever,Tan,8300 N IH,FALSE
+A740391,Unknown,Dog,Male,Australian Cattle Dog Mix,Black Smoke,8698 E RIVERSIDE DR,FALSE
+A740392,Unknown,Dog,Male,Labrador Retriever Mix,Brown,8901 SPURFLOWER CV,FALSE
+A740393,Unknown,Dog,Male,Labrador Retriever Mix,Brown,8901 SPURFLOWER CV,FALSE
+A740396,Unknown,Dog,Male,Black Mouth Cur Mix,Tan,TARA DR,FALSE
+A740399,Unknown,Dog,Male,German Shepherd Mix,Sable,2508 E RIVERSIDE DR,FALSE
+A705625,Unknown,Dog,Neutered Male,Pit Bull Mix,Brown/White,7201 LEVANDER LOOP,FALSE
+A740416,Unknown,Dog,Female,Labrador Retriever Mix,Brown/White,TAMIL ST,FALSE
+A740411,Unknown,Cat,Female,Domestic Longhair Mix,Brown Tabby,5207 PINE PL,FALSE
+A740425,Unknown,Dog,Unknown,Labrador Retriever Mix,Brown,8401 TETBURY CV,FALSE
+A740440,Unknown,Dog,Male,Pit Bull Mix,Fawn,SHERWOOD RD,TRUE
+A740435,Unknown,Dog,Male,Yorkshire Terrier Mix,Black/Brown,LAKEWAY BLVD,TRUE
+A740445,Unknown,Dog,Male,Labrador Retriever Mix,Black/Calico,10601 N FM,FALSE
+A740438,Unknown,Cat,Spayed Female,Domestic Shorthair Mix,Calico,15450 FM,FALSE
+A740449,Unknown,Cat,Unknown,Domestic Shorthair Mix,Brown Tabby/White,Unknown,FALSE
+A740451,Unknown,Dog,Male,Pit Bull Mix,White,906 NALIDE,FALSE
+A740382,Unknown,Dog,Female,Australian Cattle Dog Mix,Black/White,10802 SAN JOSE AVE,FALSE
+A669469,Unknown,Dog,Spayed Female,Labrador Retriever Mix,Black/White,2704 PARKER,FALSE
+A740456,Unknown,Dog,Female,Australian Cattle Dog Mix,Chocolate/White,6700 GROVER AVE,FALSE
+A740384,Unknown,Dog,Female,Australian Cattle Dog Mix,Black/White,10802 SAN JOSE AVE,FALSE
+A740448,Unknown,Cat,Male,Domestic Shorthair Mix,Cream Tabby,Unknown,FALSE
+A740471,Unknown,Dog,Female,Labrador Retriever Mix,Yellow,E ALAMEDA DR,FALSE
+A740481,Unknown,Dog,Male,Toy Poodle Mix,White,4713 OAK CLIFF DR,FALSE
+A740478,Unknown,Dog,Male,Norwich Terrier Mix,Tan/White,969 AND HUNTERS BEND RD,FALSE
+A740453,Unknown,Dog,Male,Golden Retriever Mix,Yellow,35 FRONTAGE ROAD,FALSE
+A740454,Unknown,Dog,Male,Chihuahua Shorthair Mix,White/Brown,BISSEL LN,FALSE
+A740407,Unknown,Dog,Male,Pit Bull Mix,Black,14969 SWISS DR,FALSE
+A740470,Unknown,Dog,Female,Norfolk Terrier Mix,Tan,6600 FM,FALSE
+A740484,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tricolor,1164 MISS KIMBERLYS LN,FALSE
+A740485,Unknown,Dog,Female,Beagle Mix,White/Brown,W NORTHCREST BLVD,FALSE
+A740386,Unknown,Dog,Female,Australian Cattle Dog,White/Black,10802 SAN JOSE AVE,FALSE
+A740385,Unknown,Dog,Female,Australian Cattle Dog Mix,Black/White,10802 SAN JOSE AVE,FALSE
+A740426,Unknown,Dog,Male,Border Collie Mix,Black/White,116 E PARSONS ST MANOR,FALSE
+A740437,Unknown,Dog,Male,Chihuahua Longhair/Pomeranian,White/Tan,3930 BEE CAVES,FALSE
+A740508,Unknown,Dog,Female,Rottweiler Mix,Black/Tan,8011 FIERRO CV,FALSE
+A740487,Unknown,Dog,Female,Yorkshire Terrier Mix,White/Black,1500 CROSSING PL,FALSE
+A740405,Unknown,Dog,Female,Australian Cattle Dog Mix,Black,10802 SAN JOSE AVE,FALSE
+A740455,Unknown,Dog,Male,Havanese Mix,White/Brown,BISSEL LN,FALSE
+A740387,Unknown,Dog,Male,Australian Cattle Dog,White/Brown,Unknown,FALSE
+A740529,Unknown,Dog,Female,Alaskan Husky Mix,White/Gray,1703 ANTLER DR,FALSE
+A740510,Unknown,Dog,Male,Dachshund Mix,Red,4710 PRAIRIE DUNES DR,FALSE
+A740388,Unknown,Dog,Female,Australian Cattle Dog,Brown Brindle,10802 SAN JOSE AVE,FALSE
+A740512,Unknown,Cat,Spayed Female,Domestic Shorthair Mix,Brown Tabby/White,12021 WYCLIFF LN,FALSE
+A740514,Unknown,Dog,Male,Norfolk Terrier Mix,Tan/Black,PLEASANT VALLEY,FALSE
+A740507,Unknown,Dog,Female,Miniature Schnauzer Mix,Gray/White,EAST 14TH ST,FALSE
+A740515,Unknown,Dog,Male,Dachshund/Chihuahua Shorthair,White/Black,102 E RUNDBERG LN,FALSE
+A740516,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tan,CHUKAR CIR,FALSE
+A439728,Unknown,Dog,Spayed Female,Pit Bull,Red/White,8208 GEORGIE TRACE,FALSE
+A740523,Unknown,Dog,Female,Pit Bull Mix,Tan,8921 SUN SHOWER BEND,FALSE
+A740504,Unknown,Cat,Female,Domestic Shorthair Mix,Torbie,4504 SOJOURNER ST,FALSE
+A740503,Unknown,Cat,Male,Domestic Shorthair Mix,Orange Tabby/White,12001 DESSAU RD,FALSE
+A453102,Unknown,Dog,Spayed Female,Border Collie/Labrador Retriever,Tricolor,E SPRINGDALE RD,FALSE
+A740517,Unknown,Dog,Male,Pit Bull Mix,Tan,3201 ESPERANZA CROSSING,FALSE
+A740502,Unknown,Cat,Male,Domestic Shorthair Mix,Orange Tabby/White,12001 DESSAU RD,FALSE
+A673318,Unknown,Dog,Spayed Female,Pit Bull Mix,Fawn/White,5800 TECHNI CENTER DR,FALSE
+A740441,Unknown,Dog,Male,Boxer,White/Brown,3811 E 12TH ST,FALSE
+A740538,Unknown,Dog,Female,Labrador Retriever Mix,Yellow,Unknown,FALSE
+A740545,Unknown,Cat,Female,Domestic Shorthair Mix,Blue,Unknown,FALSE
+A740544,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tricolor,3101 SHORELINE DR,FALSE
+A740547,Unknown,Dog,Spayed Female,Dachshund/Rat Terrier,Tricolor,E RIVERSIDE DR,FALSE
+A740588,Unknown,Dog,Male,Labrador Retriever Mix,Chocolate,1555 BASTROP HWY,FALSE
+A740589,Unknown,Dog,Female,Chihuahua Shorthair Mix,Brown,"183 AND HERGOTZ",FALSE
+A740452,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tan,18328 GREAT FALLS DR,FALSE
+A740338,Unknown,Dog,Spayed Female,Pit Bull Mix,Black/White,TAPPAN LN,FALSE
+A740556,Unknown,Dog,Male,Miniature Poodle/Cocker Spaniel,Black/White,6507 E RIVERSIDE DR,FALSE
+A740335,Unknown,Dog,Spayed Female,Labrador Retriever,Black/White,SNEED COVE,FALSE
+A740334,Unknown,Dog,Neutered Male,Pit Bull Mix,Brown Brindle,Unknown,FALSE
+A740526,Unknown,Cat,Neutered Male,Domestic Shorthair Mix,Brown Tabby,1605 BERENE AVENUE,FALSE
+A740557,Unknown,Dog,Male,Pit Bull Mix,Black/White,1300 CROSSING PL,FALSE
+A740546,Unknown,Dog,Female,Labrador Retriever Mix,White,180 STONEY CREEK,FALSE
+A740560,Unknown,Cat,Male,Domestic Shorthair Mix,Black/White,6301 THIRLMARE COURT,FALSE
+A740561,Unknown,Cat,Unknown,Domestic Shorthair Mix,White,600 RALPH,FALSE
+A740565,Unknown,Dog,Female,Chihuahua Longhair Mix,Black/Tan,8105 RESEARCH BLVD,FALSE
+A740568,Unknown,Dog,Male,Pit Bull Mix,White,Unknown,FALSE
+A740567,Unknown,Dog,Female,German Shepherd Mix,Tan,W S SLAUGHTER LN,FALSE
+A740572,Unknown,Dog,Female,Chihuahua Shorthair/Miniature Pinscher,Tan,1601 E SLAUGHTER LANE,FALSE
+A740564,Unknown,Dog,Spayed Female,Shih Tzu Mix,White/Brown,6032 SIGNAL POINT,FALSE
+A740571,Unknown,Dog,Female,Labrador Retriever Mix,Black,100 S BASTROP ST MANOR,FALSE
+A740581,Unknown,Cat,Unknown,Domestic Shorthair Mix,Calico,14300 N DESSAU RD,FALSE
+A740582,Unknown,Cat,Unknown,Domestic Shorthair Mix,Brown Tabby,1607 W PARMER LN,FALSE
+A740584,Unknown,Dog,Female,Pit Bull Mix,Brown,20412 KEILMAN LN,FALSE
+A740596,Unknown,Cat,Female,American Shorthair Mix,Brown Tabby,Unknown,FALSE
+A607606,Unknown,Cat,Neutered Male,Domestic Shorthair Mix,Orange Tabby,9120 NORTHGATE BLVD,FALSE
+A740562,Unknown,Cat,Spayed Female,Domestic Shorthair Mix,Black,9120 NORTHGATE BLVD,FALSE
+A740595,Unknown,Dog,Male,Labrador Retriever Mix,Tan/Brown,Unknown,FALSE
+A740580,Unknown,Cat,Male,Domestic Shorthair Mix,Black/White,14407 VARRELMAN,FALSE
+A740597,Unknown,Dog,Male,Alaskan Husky Mix,White/Brown,400 S CONGRESS,FALSE
+A662148,Unknown,Dog,Neutered Male,Chihuahua Shorthair Mix,White/Black,620 HWY,FALSE
+A740462,Unknown,Cat,Male,Domestic Shorthair Mix,Brown Tabby,2250 RIDGEPOINT DR,FALSE
+A740463,Unknown,Cat,Male,Domestic Shorthair Mix,Blue Tabby/White,Unknown,FALSE
+A740461,Unknown,Cat,Female,Domestic Shorthair Mix,Torbie/White,Unknown,FALSE
+A740464,Unknown,Cat,Male,Domestic Shorthair Mix,White/Brown Tabby,2250 RIDGEPOINT DR,FALSE
+A740447,Unknown,Dog,Male,Beagle Mix,Tan/Tan,PERRY RD,FALSE
+A740486,Unknown,Dog,Neutered Male,Labrador Retriever Mix,Tan/Brown,360 SPICEWOOD SPRINGS ROAD,FALSE
+A740587,Unknown,Dog,Male,Pit Bull Mix,Brown Brindle/White,1054 SPRINGDALE RD,FALSE
+A740590,Unknown,Dog,Male,Chihuahua Shorthair Mix,Tan,183 AND,FALSE
+A740585,Unknown,Dog,Male,Pit Bull Mix,Blue/White,35 FRONTAGE RD,FALSE
+A740592,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tan,Unknown,FALSE
+A740591,Unknown,Dog,Female,Chihuahua Shorthair Mix,Tan,Unknown,FALSE
+A740593,Unknown,Dog,Male,Chihuahua Shorthair Mix,Black,Unknown,FALSE
+A740377,Unknown,Dog,Neutered Male,American Staffordshire Terrier Mix,Blue/White,E MARTIN LUTHER KING JR BLVD,FALSE
+A739978,Unknown,Dog,Neutered Male,Chihuahua Shorthair Mix,Tan,2935 E SH,FALSE
+A740361,Unknown,Dog,Neutered Male,Pit Bull/Boxer,Brown/White,620 EL SALIDO,FALSE
+A740327,Unknown,Cat,Female,Domestic Shorthair Mix,Brown Tabby,1833 CHEDDAR LOOP,FALSE
+A740412,Unknown,Dog,Neutered Male,Basset Hound/Irish Wolfhound,Black/Tan,2124 BURTON,FALSE
+A740611,Unknown,Dog,Spayed Female,American Pit Bull Terrier,Red,183 AUSTIN,FALSE
+A740573,Unknown,Dog,Male,Pit Bull,White/Tan,8431 BANGOR BEND,FALSE
+A740465,Unknown,Cat,Male,Domestic Shorthair Mix,Blue Tabby,10205 COPPER RIDGE,FALSE
+A707120,Unknown,Dog,Neutered Male,Miniature Poodle Mix,White,FINCH TRL,FALSE
+A740615,Unknown,Cat,Female,Domestic Shorthair Mix,Brown Tabby/White,REGENCY DR,FALSE
+A740628,Unknown,Cat,Female,Domestic Shorthair Mix,White,ALAMEDA TRACE CIR,FALSE
+A740614,Unknown,Cat,Female,Domestic Shorthair Mix,Blue,REGENCY DR,FALSE
+A729633,Unknown,Cat,Neutered Male,Domestic Shorthair Mix,Blue/White,5808 MCKINNEY FALLS PKWY,FALSE
+A740622,Unknown,Dog,Neutered Male,Australian Cattle Dog Mix,White/White,E DESSAU RD,FALSE
+A740537,Unknown,Cat,Spayed Female,Manx Mix,Calico Point,2400 S 1ST ST,FALSE
+A738391,Unknown,Dog,Female,Great Pyrenees/Plott Hound,White/Brown Brindle,PUEBLA DR,FALSE
+A740621,Unknown,Cat,Male,Domestic Shorthair Mix,Orange Tabby,11032 TANGLERIDGE CIRCLE,FALSE
+A740617,Unknown,Cat,Female,Domestic Longhair Mix,Orange Tabby,VON QUINTUS RD,FALSE
+A740627,Unknown,Dog,Neutered Male,Rat Terrier Mix,Tricolor,W BURNET RD,FALSE
+A740620,Unknown,Dog,Male,Pit Bull Mix,Blue/White,290 FITZHUGH RD,FALSE
+A740630,Unknown,Dog,Male,Labrador Retriever Mix,Brown,6510 PEVENSEY DR,FALSE
+A740558,Unknown,Dog,Male,Dachshund Mix,Brown,9061 RESEARCH BLVD,FALSE
+A740629,Unknown,Dog,Spayed Female,Australian Shepherd Mix,Black/White,Unknown,FALSE
