@@ -28,7 +28,7 @@ export class SearchOptions extends React.Component {
             name: null,
             typesStatus: this.props.typesStatus,
             gendersStatus: this.props.gendersStatus,
-            showDeadAnimals: false,
+            showDeadAnimals: this.props.showDeadAnimals,
             breedsStatus: breedsStatus,
             colorsStatus: colorsStatus,
         };
@@ -38,6 +38,7 @@ export class SearchOptions extends React.Component {
         this.updateShowDeadAnimals = this.updateShowDeadAnimals.bind(this);
         this.updateBreeds = this.updateBreeds.bind(this);
         this.updateColors = this.updateColors.bind(this);
+        this.createQuery = this.createQuery.bind(this);
     }
 
     updateName(name) {
@@ -97,8 +98,41 @@ export class SearchOptions extends React.Component {
     }
 
     createQuery() {
-        const query = new Query(this.state );
-        this.props.sendQuery(query);
+        console.log("STATE", this.state);
+        const checkedAnimalTypes = this.filterTrueChecks(this.state.typesStatus);
+        const query = new Query(
+            this.state.name,
+            checkedAnimalTypes,
+            this.filterTrueChecks(this.state.gendersStatus), 
+            this.state.showDeadAnimals, 
+            this.getCheckedAttributes(this.state.breedsStatus, checkedAnimalTypes, this.props.breeds),
+            this.getCheckedAttributes(this.state.colorsStatus, checkedAnimalTypes, this.props.colors)
+        );
+        console.log("QUERY", query)
+        this.props.getSearchOptions(query);
+    }
+
+    filterTrueChecks(map) {
+        let result = [];
+        for (const [key, value] of map) {
+            if (value) {
+                result.push(key);
+            }
+        }
+        return result;
+    }
+
+    getCheckedAttributes(attributeStatus, checkedTypes, attributeValues) {
+        let result = [];
+        for (const type of checkedTypes) {
+            const checkedAttributes = attributeStatus.get(type);
+            if (checkedAttributes[0] === "Select all") {
+                result = result.concat(attributeValues.get(type));
+            } else {
+                result = result.concat(checkedAttributes);
+            }
+        }
+        return result;
     }
 
     checkNoAnimalTypeAndGenderIsChosen() {
@@ -153,7 +187,7 @@ export class SearchOptions extends React.Component {
                     <div>
                         <h3>Colors</h3>
                         {Array.from(this.props.typesStatus.keys()).map(type => (
-                            <AnimalAttribute
+                            <AnimalAttribute key={type}
                                 animalAttributeValues={this.props.colors.get(type)}
                                 attributeName={'Colors'}
                                 animalTypeChecked={this.state.typesStatus.get(type)}
@@ -167,7 +201,7 @@ export class SearchOptions extends React.Component {
                     <RaisedButton 
                         label="Submit" 
                         style={style}
-                        onClick={this.createQuery()}
+                        onClick={this.createQuery}
                         disabled={!this.state.name && this.checkNoAnimalTypeAndGenderIsChosen()}
                     />
                 </MuiThemeProvider>
@@ -177,7 +211,12 @@ export class SearchOptions extends React.Component {
 }
 
 class Query {
-    constructor(state) {
-        this.state = state;
+    constructor(name, types, genders, showDeadAnimals, breeds, colors) {
+        this.name = name;
+        this.types = types;
+        this.genders = genders;
+        this.showDeadAnimals = showDeadAnimals;
+        this.breeds = breeds;
+        this.colors = colors;
     }
 }

@@ -10,33 +10,49 @@ export class SearchResults extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        {/* <h2>
-          {this.props.queryResult}
-        </h2> */}
-        {/* <MuiThemeProvider>
-        <Card>
-          <CardHeader
-            title="URL Avatar"
-            subtitle="Subtitle"
-            avatar="images/jsa-128.jpg"
-          />
-          <CardMedia
-            overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-          >
-            <img src="images/nature-600-337.jpg" alt="" />
-          </CardMedia>
-          <CardTitle title="Card title" subtitle="Card subtitle" />
-          <CardText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-            Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-            Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
-          </CardText>
-        </Card>
-        </MuiThemeProvider> */}
-      </div>
-    );
+    const pets = this.props.queryResult;
+    if (pets !== "Find animals") {
+      return (
+        <div>
+          {pets.map((pet) => (
+            <MuiThemeProvider>
+              <div>
+              <Card>
+                <CardMedia
+                  overlay={<CardTitle title={pet.animalName} subtitle={pet.animalType} />}
+                >
+                  <img src="https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg" alt="No img" />
+                </CardMedia>
+                <CardText>
+                 <ul>
+                   <li>
+                    <h4>Gender: {pet.animalGender}</h4>
+                   </li>
+                   <li>
+                    <h4>Breed: {pet.animalBreed}</h4>
+                   </li>
+                   <li>
+                    <h4>Color: {pet.animalColor}</h4>
+                   </li>
+                   <li>
+                    <h4>Address: {pet.address}</h4>
+                   </li>
+                 </ul>
+                </CardText>
+              </Card>
+              </div>
+            </MuiThemeProvider>
+          ))}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h2>
+            {pets}
+          </h2>
+        </div>
+      );
+    }
   }
 }

@@ -27,7 +27,8 @@ export class ShowDeadAnimals extends React.Component {
                 <MuiThemeProvider>
                     <div>
                         <h3>Show dead animals?</h3>
-                        <RadioButtonGroup 
+                        <RadioButtonGroup
+                            defaultSelected="false"
                             name="showDeadAnimals"
                             onChange={(event, value) => this.props.updateShowDeadAnimals(value)}
                             >
