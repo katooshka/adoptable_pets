@@ -27,9 +27,10 @@ export class AnimalAttribute extends React.Component {
             valuesList.push(values[values.length - 1]);
             this.setState({ values: valuesList });
         } else {
-            this.setState({ values: values });
+            valuesList.push(...values);
+            this.setState({ values: valuesList });
         }
-        this.props.updateAttribute(this.props.animalType, this.state.values);
+        this.props.updateAttribute(this.props.animalType, valuesList);
     }
 
     createAttributeValuesList(attributeValues, animalType, attributeName, values, disabled) {

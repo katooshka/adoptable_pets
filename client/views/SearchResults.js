@@ -12,6 +12,11 @@ export class SearchResults extends React.Component {
   render() {
     const pets = this.props.queryResult;
     let image = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
+    for (let pet of pets) {
+      if (pet.image === '') {
+        pet.image = image;
+      }
+    }
     if (pets !== "Find animals") {
       return (
         <div>

@@ -81,6 +81,7 @@ export class SearchOptions extends React.Component {
         this.setState((oldState) => {
             let newBreedsStatus = new Map(oldState.breedsStatus);
             newBreedsStatus.set(animalType, values);
+            console.log("BREEDS", newBreedsStatus);            
             return {
                 breedsStatus: newBreedsStatus
             };
