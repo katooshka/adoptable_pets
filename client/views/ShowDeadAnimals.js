@@ -26,7 +26,9 @@ export class ShowDeadAnimals extends React.Component {
             <div>
                 <MuiThemeProvider>
                     <div>
-                        <h3>Show dead animals?</h3>
+                    <div className="center card-header">
+                        <h4>Show dead animals?</h4>
+                        </div>
                         <RadioButtonGroup
                             defaultSelected="false"
                             name="showDeadAnimals"

@@ -3,6 +3,8 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Checkbox from 'material-ui/Checkbox';
 
+import Paper from 'material-ui/Paper';
+
 const styles = {
     block: {
         maxWidth: 250,
@@ -38,12 +40,14 @@ export class AnimalTypes extends React.Component {
             <div>
                 {Array.from(this.state.typesStatus.keys()).map(type => (
                     <MuiThemeProvider key={type}>
+                     
                         <Checkbox 
                             label={type}
                             checked={this.state.typesStatus.get(type)}
                             onCheck={this.createOnCheckForType(type)}
                             style={styles.checkbox}
                         />
+                    
                     </MuiThemeProvider>))}
             </div>
         );

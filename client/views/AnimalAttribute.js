@@ -44,6 +44,7 @@ export class AnimalAttribute extends React.Component {
                     value={values}
                     onChange={this.handleChange}
                     disabled={disabled}
+                    fullWidth={true}
                 >
                     {<MenuItem
                         key="Select all"

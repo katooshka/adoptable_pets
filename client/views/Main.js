@@ -83,7 +83,7 @@ export class Main extends React.Component {
             <div className="row">
                 <div className="col-xs-0 col-sm-1 col-lg-2"></div>
                 <div className="col-xs-12 col-sm-10 col-lg-8">
-                    <div className="panel-heading">
+                    <div className="panel-heading header center">
                         <h1>Adoptable Pets</h1>
                     </div>
                     <div className="panel panel-default">
@@ -97,7 +97,9 @@ export class Main extends React.Component {
                             showDeadAnimals={this.state.showDeadAnimals}
                             getSearchOptions={this.getSearchOptions}
                         />
-                        <h1>Search Results:</h1>
+                        <div className="panel-heading divider center">
+                            <h1>Search Results</h1>
+                        </div>
                         <SearchResults
                             queryResult={this.state.queryResult}
                         />

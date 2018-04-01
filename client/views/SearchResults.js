@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
-  margin: 12,
+  margin: 12
 };
 
 export class SearchResults extends React.Component {
@@ -27,83 +27,82 @@ export class SearchResults extends React.Component {
 
   renderShowMore() {
     return (
-      <div className="row">
-      <div className="col-xs-0 col-sm-1 col-lg-2"></div>
-      <div className="col-xs-12 col-sm-10 col-lg-8">
-        <MuiThemeProvider>
-          <RaisedButton
-            label="Show more"
-            style={style}
-            onClick={this.updateShownPetsState}
-          />
-        </MuiThemeProvider>
+      <div className="row center">
+        <div className="col-xs-0 col-sm-1 col-lg-2"></div>
+        <div className="col-xs-12 col-sm-10 col-lg-8 center">
+          <MuiThemeProvider>
+            <RaisedButton
+              backgroundColor="#4db6ac"
+              label="Show more"
+              style={style}
+              onClick={this.updateShownPetsState}
+              fullWidth={true}
+            />
+          </MuiThemeProvider>
+        </div>
+        <div className="col-xs-0 col-sm-1 col-lg-2"></div>
       </div>
-      <div className="col-xs-0 col-sm-1 col-lg-2"></div>
-    </div>
     );
   }
 
-  renderPetsCard(pets) {
+  renderPetsCard(pets, imageClass) {
     return (
       <div className="row">
-      {pets.map((pet) => (
-        <div className="col-md-6 col-lg-4">
-          <MuiThemeProvider>
-            <div>
-              <Card className="pet-card">
-                <CardMedia
-                  overlay={<CardTitle title={pet.animalName} subtitle={pet.animalType} />}
-                >
-                  <img src={pet.image} alt="Image not found" />
-                </CardMedia>
-                <CardText>
-                  <ul>
-                    <li>
-                      <h4>Gender: {pet.animalGender}</h4>
-                    </li>
-                    <li>
-                      <h4>Breed: {pet.animalBreed}</h4>
-                    </li>
-                    <li>
-                      <h4>Color: {pet.animalColor}</h4>
-                    </li>
-                    <li>
-                      <h4>Address: {pet.address}</h4>
-                    </li>
-                  </ul>
-                </CardText>
-              </Card>
-            </div>
-          </MuiThemeProvider>
-        </div>
-      ))}
-    </div>
+        {pets.map((pet) => (
+          <div className="col-md-6 col-lg-4">
+            <MuiThemeProvider>
+              <div>
+                <Card className="card">
+                  <CardMedia
+                    overlay={<CardTitle title={pet.animalName}/>}
+                  >
+                    <img src={pet.image} class={imageClass} alt="Image not found" />
+                  </CardMedia>
+                  <CardText>
+                    <h6><b>Type:</b> {pet.animalType}</h6>
+                    <h6><b>Gender:</b> {pet.animalGender}</h6>
+                    <h6><b>Breed:</b> {pet.animalBreed}</h6>
+                    <h6><b>Color:</b> {pet.animalColor}</h6>
+                    <h6><b>Address:</b> {pet.address}</h6>
+                    <h6>{pet.isDead}</h6>
+                  </CardText>
+                </Card>
+              </div>
+            </MuiThemeProvider>
+          </div>
+        ))}
+      </div>
     );
   }
 
   render() {
     const pets = this.props.queryResult;
-    if (pets !== "Find animals") {
+      if (pets !== "Find animals") {
       let image = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
+      let imageClass = '.alive-pet'
       for (let pet of pets) {
         if (pet.image === '') {
           pet.image = image;
         }
-      }
-      const result = [];
-        result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown)));
-        if (this.state.maxShown < pets.length) {
-          result.push(this.renderShowMore());
+        if (pet.isDead === 'TRUE') {
+          pet.isDead = 'This pet is dead';
+          imageClass = '.dead-pet';
+        } else {
+          pet.isDead = ''
         }
-      return (<div>
+      }      
+      const result = [];
+      result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown), imageClass));
+      if (this.state.maxShown < pets.length) {
+        result.push(this.renderShowMore());
+      }
+      return (
+      <div>
         {result}
       </div>);
     } else {
       return (
         <div>
-          <h2>
-            {pets}
-          </h2>
         </div>
       );
     }
