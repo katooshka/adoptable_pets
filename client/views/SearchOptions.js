@@ -103,8 +103,8 @@ export class SearchOptions extends React.Component {
         const query = new Query(
             this.state.name,
             checkedAnimalTypes,
-            this.filterTrueChecks(this.state.gendersStatus), 
-            this.state.showDeadAnimals, 
+            this.filterTrueChecks(this.state.gendersStatus),
+            this.state.showDeadAnimals,
             this.getCheckedAttributes(this.state.breedsStatus, checkedAnimalTypes, this.props.breeds),
             this.getCheckedAttributes(this.state.colorsStatus, checkedAnimalTypes, this.props.colors)
         );
@@ -168,7 +168,7 @@ export class SearchOptions extends React.Component {
                     gendersStatus={this.props.gendersStatus}
                     updateGenderCheck={this.updateGenderCheck}
                 />
-                <ShowDeadAnimals 
+                <ShowDeadAnimals
                     updateShowDeadAnimals={this.updateShowDeadAnimals}
                 />
                 <div>
@@ -198,8 +198,8 @@ export class SearchOptions extends React.Component {
                     </div>
                 </div>
                 <MuiThemeProvider>
-                    <RaisedButton 
-                        label="Submit" 
+                    <RaisedButton
+                        label="Submit"
                         style={style}
                         onClick={this.createQuery}
                         disabled={!this.state.name && this.checkNoAnimalTypeAndGenderIsChosen()}

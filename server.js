@@ -28,13 +28,11 @@ const isDevelopment = process.env.NODE_ENV === 'development';
 
   app.get("/get-data", async function (req, res) {
     const docs = await getInitialData(dbURL);
-    console.log("get-data DOCS", docs);
     res.send(docs);
   });
   
   app.get("/get-animals", async function (req, res) {
     const docs = await getAnimals(dbURL, req.query);
-    console.log("DOCS", docs);
     res.send(docs);
   });
 
@@ -45,7 +43,21 @@ const isDevelopment = process.env.NODE_ENV === 'development';
   async function getAnimals(dbUrl, query) {
     try {
       const connection = await connect(dbUrl);
-      const docs = await find(connection, query);
+      console.log('QUERY', query);
+      const dbQuery = {};
+      if (query.animalName) {       
+        dbQuery.animalName = query.animalName;
+      }
+      if (query.showDeadAnimals !== 'true') {
+        dbQuery.isDead = "FALSE";
+      }
+      for (const filterName of ['animalBreed', 'animalColor', 'animalType', 'animalGender']) {
+        // console.log(filterName, query[filterName]); 
+        if (query[filterName]) {
+          dbQuery[filterName] = {$in: query[filterName]};
+        }
+      }
+      const docs = await find(connection, dbQuery);
       connection.close();
       return docs;
     } catch (err) {
@@ -115,6 +127,7 @@ const isDevelopment = process.env.NODE_ENV === 'development';
   function find(connection, query) {
     return new Promise((resolve, reject) => {
       const db = connection.db(dbName);
+      console.log("QUERY ON SERVER", query);
       db.collection(collectionName).find(query).toArray((err, docs) => {
         if (err) {
           reject("Unable to find document", err);
