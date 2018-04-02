@@ -4,15 +4,6 @@ set -e
 
 echo 'Start script.'
 
-echo 'Installing git...'
-sudo yum install git-all -y
-
-echo 'Cloning repository...'
-git clone https://github.com/katooshka/adoptable_pets.git
-
-echo 'Navigate to the main app directory'
-cd adoptable_pets
-
 echo 'Installing NodeJS...'
 curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
 sudo yum -y install nodejs
