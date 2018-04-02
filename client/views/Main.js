@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import { SearchOptions } from './SearchOptions.js';
 import { SearchResults } from './SearchResults.js';
+import { InitialDataStatus, QueryResultStatus } from './StatusConstants.js';
 
 export class Main extends React.Component {
     constructor(props) {
@@ -14,19 +15,23 @@ export class Main extends React.Component {
             showDeadAnimals: false,
             typesStatus: null,
             gendersStatus: null,
-            queryResultFetched: false,
-            queryResult: 'No results'
+            initialDataStatus: InitialDataStatus.LOADING,
+            queryResultStatus: QueryResultStatus.NOT_REQUIRED
         };
         this.getSearchOptions = this.getSearchOptions.bind(this);
     }
 
+    /**
+     * This is the main client component that handles data flow from other code parts. 
+     * After the component mounts, initial data is queried from the server via API call. The result is then processed
+     * and added to the component state.
+     */
     async componentDidMount() {
         const response = await axios.get('/get-data');
         if (response.status !== 200) {
-            throw new Error('Bad response', response);
+            this.setState((oldState) => { oldState.initialDataStatus = InitialDataStatus.FAILED });
         }
         const responseData = response.data;
-
         let typesStatus = new Map();
         for (let type of responseData.types) {
             typesStatus.set(type, true);
@@ -40,13 +45,19 @@ export class Main extends React.Component {
             colors: new Map(responseData.colors),
             breeds: new Map(responseData.breeds),
             gendersStatus: gendersStatus,
-            typesStatus: typesStatus
+            typesStatus: typesStatus,
+            initialDataStatus: InitialDataStatus.LOADED
         });
+
     }
 
     async getSearchOptions(query) {
+        this.setState((oldState) => { oldState.queryResultStatus = QueryResultStatus.FETCHING })
         const pets = await this.getSearchResults('/get-animals', query);
-        this.setState({ queryResult: pets.data });
+        this.setState({ 
+            queryResult: pets.data, 
+            queryResultStatus: QueryResultStatus.FETCHED
+         });
     }
 
     async getSearchResults(path, query) {
@@ -68,10 +79,21 @@ export class Main extends React.Component {
         return response;
     }
 
+    /**
+     * This part of code controls the flow between two components: SearchOptions and SearchResults. First initial data
+     * is fetched from the server and passed to SearchOptions component as props and is then used to render search options available to a user.
+     * After a user passes the required query parameters, they are then processed in getSearchOptions() method,
+     * the required data is fetched from the server and passed to SearchResults component that is responsible for results rendering.
+     */
     render() {
-        if (this.state.names === null) {
+        if (this.state.initialDataStatus === InitialDataStatus.LOADING) {
             return <div>Loading...</div>
+        } else if (this.state.initialDataStatus === InitialDataStatus.FAILED) {
+            return <div>There is an issue on the server. Data cannot be loaded.</div>
         }
+        let searchResultStatusText = 'Search Results';
+        if (this.state.queryResultStatus === QueryResultStatus.FETCHING) searchResultStatusText = 'Fetching Data...';
+        if (this.state.queryResultStatus === QueryResultStatus.FAILED) searchResultStatusText = 'Data Cannot Be Loaded';
         return (
             <div className="row">
                 <div className="col-xs-0 col-sm-1 col-lg-2"></div>
@@ -90,10 +112,10 @@ export class Main extends React.Component {
                             showDeadAnimals={this.state.showDeadAnimals}
                             getSearchOptions={this.getSearchOptions}
                         />
-                        <div className="panel-heading divider center">
-                            <h1>Search Results</h1>
-                        </div>
+                        {this.state.queryResultStatus !== QueryResultStatus.NOT_REQUIRED ? 
+                        <div className="panel-heading divider center"><h1>{searchResultStatusText}</h1></div> : <div></div>}
                         <SearchResults
+                            queryResultStatus={this.state.queryResultStatus}
                             queryResult={this.state.queryResult}
                         />
                     </div>

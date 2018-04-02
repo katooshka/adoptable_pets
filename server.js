@@ -28,11 +28,19 @@ if (isDevelopment) {
 }
 app.use(express.static(STATIC_PATH));
 
+/**
+ * This method and its subsequent methods are listening for the initial search options request from a client, 
+ * get the result from the MongoDB database, form a proper response and send it back to the client.
+ */
 app.get("/get-data", async function (req, res) {
   const docs = await getInitialData(dbURL);
   res.send(docs);
 });
 
+/**
+ * This method and its subsequent methods are listening for a pets request from a user, form a proper MongoDB query,
+ * get the data and send it back to the client.
+ */
 app.get("/get-animals", async function (req, res) {
   const docs = await getAnimals(dbURL, req.query);
   res.send(docs);

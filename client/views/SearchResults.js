@@ -4,6 +4,8 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import { QueryResultStatus } from './StatusConstants.js';
+
 const style = {
   margin: 12
 };
@@ -76,9 +78,12 @@ export class SearchResults extends React.Component {
     );
   }
 
+  /**
+   * This method renders query result passed to the component from Main component if the request has been processed successfully.
+   */
   render() {
     const pets = this.props.queryResult;
-    if (pets !== "No results") {
+    if (this.props.queryResultStatus === QueryResultStatus.FETCHED) {
       const result = [];
       result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown)));
       if (this.state.maxShown < pets.length) {

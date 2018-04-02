@@ -42,6 +42,10 @@ export class SearchOptions extends React.Component {
         this.createQuery = this.createQuery.bind(this);
     }
 
+    /**
+     * This method as well as the following update methods are listening for the options update in child components.
+     * Each time a user changes their query, the changes are passed to SearchOptions state.
+     */
     updateName(name) {
         this.setState(() => {
             return {
@@ -98,6 +102,9 @@ export class SearchOptions extends React.Component {
         });
     }
 
+    /**
+     * After a user clicks Submit button their query is processed and passed to the Main component to send it to the server.
+     */
     createQuery() {
         const checkedAnimalTypes = this.filterTrueChecks(this.state.typesStatus);
         const query = new Query(

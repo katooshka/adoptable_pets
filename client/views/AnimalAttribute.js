@@ -13,6 +13,11 @@ export class AnimalAttribute extends React.Component {
         this.createAttributeValuesList = this.createAttributeValuesList.bind(this);
     }
 
+    /**
+     * This method is used to validate user input in animal attributes fields (currently these are breeds and colors). 
+     * A user can only select all the attributes available, or select one or more than one attributes. This search option cannot
+     * provide no value to the final query.
+     */
     handleChange(event, index, values) {
         let valuesList = [];
         if (!values.length) {
