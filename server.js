@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { MongoClient } from 'mongodb';
 
-const PORT = 80;
+const PORT = 7700;
 const PUBLIC_PATH = __dirname + '/public';
 const STATIC_PATH = __dirname + '/static';
 const dbURL = 'mongodb://localhost:27017';
@@ -40,6 +40,14 @@ app.get("/get-animals", async function (req, res) {
 
 async function getAnimals(dbUrl, query) {
   const connection = await MongoClient.connect(dbUrl);
+  const dbQuery = formDbQuery(query);
+  const db = connection.db(dbName);
+  const docs = await db.collection(collectionName).find(dbQuery).toArray();
+  connection.close();
+  return docs;
+}
+
+export function formDbQuery(query) {
   const dbQuery = {};
   if (query.animalName) {
     dbQuery.animalName = query.animalName;
@@ -52,10 +60,7 @@ async function getAnimals(dbUrl, query) {
       dbQuery[value] = { $in: query[value] };
     }
   }
-  const db = connection.db(dbName);
-  const docs = await db.collection(collectionName).find(dbQuery).toArray();
-  connection.close();
-  return docs;
+  return dbQuery;
 }
 
 async function getInitialData(dbUrl) {
