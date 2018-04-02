@@ -3,7 +3,6 @@ import axios from 'axios';
 
 import { SearchOptions } from './SearchOptions.js';
 import { SearchResults } from './SearchResults.js';
-import { Header } from './Header.js';
 
 export class Main extends React.Component {
     constructor(props) {
@@ -16,7 +15,7 @@ export class Main extends React.Component {
             typesStatus: null,
             gendersStatus: null,
             queryResultFetched: false,
-            queryResult: "Find animals"
+            queryResult: 'No results'
         };
         this.getSearchOptions = this.getSearchOptions.bind(this);
     }
@@ -47,32 +46,26 @@ export class Main extends React.Component {
 
     async getSearchOptions(query) {
         const pets = await this.getSearchResults('/get-animals', query);
-        console.log("PETS DATA", pets.data);
         this.setState({ queryResult: pets.data });
     }
 
     async getSearchResults(path, query) {
-        try {
-            const params = {
-                showDeadAnimals: query.showDeadAnimals,
-                animalBreed: query.breeds,
-                animalColor: query.colors,
-            }
-            if (query.name) {
-                params.animalName = query.name;
-            }
-            if (query.types.length > 0) {
-                params.animalType = query.types;
-            }
-            if (query.genders.length > 0) {
-                params.animalGender = query.genders;
-            }
-            console.log("PARAMS", params);
-            const response = await axios.get(path, { params });
-            return response;
-        } catch (err) {
-            console.log("Error while fetching query results", err);
+        const params = {
+            showDeadAnimals: query.showDeadAnimals,
+            animalBreed: query.breeds,
+            animalColor: query.colors,
         }
+        if (query.name) {
+            params.animalName = query.name;
+        }
+        if (query.types.length > 0) {
+            params.animalType = query.types;
+        }
+        if (query.genders.length > 0) {
+            params.animalGender = query.genders;
+        }
+        const response = await axios.get(path, { params });
+        return response;
     }
 
     render() {

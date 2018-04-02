@@ -18,11 +18,11 @@ export class AnimalAttribute extends React.Component {
         if (!values.length) {
             valuesList.push("Select all")
             this.setState({ values: valuesList });
-        } 
+        }
         else if (values[0] === "Select all") {
             valuesList.push(values[values.length - 1]);
             this.setState({ values: valuesList });
-        } 
+        }
         else if (values[values.length - 1] === "Select all") {
             valuesList.push(values[values.length - 1]);
             this.setState({ values: valuesList });

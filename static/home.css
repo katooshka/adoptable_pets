@@ -43,6 +43,7 @@ body {
 }
 
 .alive-pet {
+    filter: grayscale(0%);
 }
 
 .option-padding {

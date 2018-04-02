@@ -54,9 +54,9 @@ export class SearchResults extends React.Component {
               <div>
                 <Card className="card">
                   <CardMedia
-                    overlay={<CardTitle title={pet.animalName}/>}
+                    overlay={<CardTitle title={pet.animalName} />}
                   >
-                    <img src={pet.image} class={imageClass} alt="Image not found" />
+                    <img src={pet.image} class={pet.imageClass} alt="Image not found" />
                   </CardMedia>
                   <CardText>
                     <h6><b>Type:</b> {pet.animalType}</h6>
@@ -77,29 +77,29 @@ export class SearchResults extends React.Component {
 
   render() {
     const pets = this.props.queryResult;
-      if (pets !== "Find animals") {
+    if (pets !== "No results") {
       let image = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
-      let imageClass = '.alive-pet'
       for (let pet of pets) {
         if (pet.image === '') {
           pet.image = image;
+          pet.imageClass = 'alive-pet';
         }
         if (pet.isDead === 'TRUE') {
           pet.isDead = 'This pet is dead';
-          imageClass = '.dead-pet';
+          pet.imageClass = 'dead-pet';
         } else {
           pet.isDead = ''
         }
-      }      
+      }
       const result = [];
-      result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown), imageClass));
+      result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown)));
       if (this.state.maxShown < pets.length) {
         result.push(this.renderShowMore());
       }
       return (
-      <div>
-        {result}
-      </div>);
+        <div>
+          {result}
+        </div>);
     } else {
       return (
         <div>

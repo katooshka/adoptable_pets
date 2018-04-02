@@ -38,7 +38,7 @@ export class AnimalGenders extends React.Component {
             <div>
                 {Array.from(this.state.gendersStatus.keys()).map(gender => (
                     <MuiThemeProvider key={gender}>
-                        <Checkbox 
+                        <Checkbox
                             label={gender}
                             checked={this.state.gendersStatus.get(gender)}
                             onCheck={this.createOnCheckForGender(gender)}

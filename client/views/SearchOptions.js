@@ -82,7 +82,6 @@ export class SearchOptions extends React.Component {
         this.setState((oldState) => {
             let newBreedsStatus = new Map(oldState.breedsStatus);
             newBreedsStatus.set(animalType, values);
-            console.log("BREEDS", newBreedsStatus);
             return {
                 breedsStatus: newBreedsStatus
             };
@@ -100,7 +99,6 @@ export class SearchOptions extends React.Component {
     }
 
     createQuery() {
-        console.log("STATE", this.state);
         const checkedAnimalTypes = this.filterTrueChecks(this.state.typesStatus);
         const query = new Query(
             this.state.name,
@@ -110,7 +108,6 @@ export class SearchOptions extends React.Component {
             this.getCheckedAttributes(this.state.breedsStatus, checkedAnimalTypes, this.props.breeds),
             this.getCheckedAttributes(this.state.colorsStatus, checkedAnimalTypes, this.props.colors)
         );
-        console.log("QUERY", query)
         this.props.getSearchOptions(query);
     }
 
@@ -160,8 +157,8 @@ export class SearchOptions extends React.Component {
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
                             <Paper zDepth={1} class="option-padding card">
-                            <div className="center card-header">
-                                <h4>Pet name</h4>
+                                <div className="center card-header">
+                                    <h4>Pet name</h4>
                                 </div>
                                 <AnimalNames class="center"
                                     names={this.props.names}
@@ -174,8 +171,8 @@ export class SearchOptions extends React.Component {
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
                             <Paper zDepth={1} class="option-padding card">
-                            <div className="center card-header">
-                                <h4>Pet type</h4>
+                                <div className="center card-header">
+                                    <h4>Pet type</h4>
                                 </div>
                                 <AnimalTypes
                                     typesStatus={this.props.typesStatus}
@@ -196,8 +193,8 @@ export class SearchOptions extends React.Component {
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
                             <Paper zDepth={1} class="option-padding card">
-                            <div className="center card-header">
-                                <h4>Pet gender</h4>
+                                <div className="center card-header">
+                                    <h4>Pet gender</h4>
                                 </div>
                                 <AnimalGenders
                                     gendersStatus={this.props.gendersStatus}
@@ -209,8 +206,8 @@ export class SearchOptions extends React.Component {
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
                             <Paper zDepth={1} class="option-padding card">
-                            <div className="center card-header">
-                                <h4>Pet breed</h4>
+                                <div className="center card-header">
+                                    <h4>Pet breed</h4>
                                 </div>
                                 {Array.from(this.props.typesStatus.keys()).map(type => (
                                     <AnimalAttribute key={type}
@@ -228,8 +225,8 @@ export class SearchOptions extends React.Component {
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
                             <Paper zDepth={1} class="option-padding card">
-                            <div className="center card-header">
-                                <h4>Pet color</h4>
+                                <div className="center card-header">
+                                    <h4>Pet color</h4>
                                 </div>
                                 {Array.from(this.props.typesStatus.keys()).map(type => (
                                     <AnimalAttribute key={type}
@@ -250,7 +247,7 @@ export class SearchOptions extends React.Component {
                     <div className="col-xs-0 col-sm-1 col-lg-2" ></div>
                     <div className="col-xs-12 col-sm-10 col-lg-8 center">
                         <MuiThemeProvider>
-                            <RaisedButton 
+                            <RaisedButton
                                 backgroundColor="#4db6ac"
                                 label="Find pets"
                                 style={style}
