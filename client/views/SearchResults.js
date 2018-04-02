@@ -45,7 +45,7 @@ export class SearchResults extends React.Component {
     );
   }
 
-  renderPetsCard(pets, imageClass) {
+  renderPetsCard(pets) {
     return (
       <div className="row">
         {pets.map((pet) => (

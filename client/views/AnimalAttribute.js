@@ -39,6 +39,7 @@ export class AnimalAttribute extends React.Component {
         return (
             <MuiThemeProvider>
                 <SelectField
+                    floatingLabelText={animalType}
                     multiple={true}
                     hintText={text}
                     value={values}
