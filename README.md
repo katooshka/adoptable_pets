@@ -21,11 +21,11 @@ Live demo available [here](http://ec2-35-178-39-97.eu-west-2.compute.amazonaws.c
 
   `cd adoptable_pets`
 
-* Install node
+* Install NodeJS
 
   https://nodejs.org/en/download/package-manager/
 
-* Install node packages
+* Install packages
 
   `npm install`
 
@@ -59,7 +59,7 @@ The following installation steps have been tested for Amazon Linux EC2 instance:
   ```
   
 ## App flowchart
-Here is a basic diagram on how the app is designed
+Here is the basic diagram on how the app is designed
 
 ![flowchart](https://user-images.githubusercontent.com/14299978/38213121-0d1d0d9a-36b8-11e8-9a98-75dbc6db7ac1.png)
 
