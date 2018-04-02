@@ -62,5 +62,8 @@ The following installation steps have been tested for Amazon Linux EC2 instance:
 * Mocha, Chai for tests
 * React components: [Material-UI](http://www.material-ui.com/)
 
+## App flowchart
+(https://raw.githubusercontent.com/katooshka/adoptable_pets/master/app-flowchart.png)
+
 
 
