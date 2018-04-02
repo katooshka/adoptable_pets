@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { MongoClient } from 'mongodb';
 
-const PORT = 7700;
+const PORT = 80;
 const PUBLIC_PATH = __dirname + '/public';
 const STATIC_PATH = __dirname + '/static';
 const dbURL = 'mongodb://localhost:27017';
