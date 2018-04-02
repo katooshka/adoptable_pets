@@ -46,6 +46,7 @@ export class SearchResults extends React.Component {
   }
 
   renderPetsCard(pets) {
+    const defaultImage = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
     return (
       <div className="row">
         {pets.map((pet) => (
@@ -56,7 +57,7 @@ export class SearchResults extends React.Component {
                   <CardMedia
                     overlay={<CardTitle title={pet.animalName} />}
                   >
-                    <img src={pet.image} class={pet.imageClass} alt="Image not found" />
+                    <img src={pet.image === '' ? defaultImage : pet.image} class={pet.isDead === 'TRUE' ? 'dead-pet' : 'alive-pet'} alt="Image not found" />
                   </CardMedia>
                   <CardText>
                     <h6><b>Type:</b> {pet.animalType}</h6>
@@ -64,7 +65,7 @@ export class SearchResults extends React.Component {
                     <h6><b>Breed:</b> {pet.animalBreed}</h6>
                     <h6><b>Color:</b> {pet.animalColor}</h6>
                     <h6><b>Address:</b> {pet.address}</h6>
-                    <h6>{pet.isDead}</h6>
+                    {pet.isDead === 'TRUE' ? <h6>This pet is dead</h6> : ''}
                   </CardText>
                 </Card>
               </div>
@@ -78,19 +79,6 @@ export class SearchResults extends React.Component {
   render() {
     const pets = this.props.queryResult;
     if (pets !== "No results") {
-      let image = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
-      for (let pet of pets) {
-        if (pet.image === '') {
-          pet.image = image;
-          pet.imageClass = 'alive-pet';
-        }
-        if (pet.isDead === 'TRUE') {
-          pet.isDead = 'This pet is dead';
-          pet.imageClass = 'dead-pet';
-        } else {
-          pet.isDead = ''
-        }
-      }
       const result = [];
       result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown)));
       if (this.state.maxShown < pets.length) {
