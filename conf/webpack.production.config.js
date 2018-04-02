@@ -5,11 +5,11 @@ export default new Config().extend('conf/webpack.base.config.js').merge({
   output: {
     filename: 'bundle.min.js'
   },
-  devtool: 'source-map',
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: true
-      }
-    })]
+  devtool: 'source-map'
+  // plugins: [
+  //   new webpack.optimize.UglifyJsPlugin({
+  //     compress: {
+  //       warnings: true
+  //     }
+  //   })]
 });
