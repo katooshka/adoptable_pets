@@ -57,13 +57,16 @@ The following installation steps have been tested for Amazon Linux EC2 instance:
   sudo chmod 755 ./install-on-amazon-linux.sh
   sudo ./install-on-amazon-linux.sh
   ```
+  
+## App flowchart
+Here is a basic diagram on how the app is designed
+
+![flowchart](https://user-images.githubusercontent.com/14299978/38213121-0d1d0d9a-36b8-11e8-9a98-75dbc6db7ac1.png)
+
 ## Technologies in use
 * ReactJS, NodeJS, MongoDB
 * Mocha, Chai for tests
 * React components: [Material-UI](http://www.material-ui.com/)
-
-## App flowchart
-(https://raw.githubusercontent.com/katooshka/adoptable_pets/master/app-flowchart.png)
 
 
 
