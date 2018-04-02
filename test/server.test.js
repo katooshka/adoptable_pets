@@ -1,5 +1,3 @@
-let assert = require('assert');
-let should = require('should');
 let server = require('../server.js');
 
 let chai = require('chai');  
