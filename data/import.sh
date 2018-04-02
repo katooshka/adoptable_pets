@@ -2,7 +2,7 @@
 
 set -e
 
-csvtojson pets.csv > pets.json
+csvtojson pets.csv > ./data/pets.json
 echo 'CSV file parsed'
 
 mongo pets --eval "db.dropDatabase()"
