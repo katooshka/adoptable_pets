@@ -84,20 +84,18 @@ export class SearchResults extends React.Component {
   render() {
     const pets = this.props.queryResult;
     if (this.props.queryResultStatus === QueryResultStatus.FETCHED) {
+      if (pets.length < 1){
+        return (<div className='center'><h2>There are no pets matching your query</h2></div>);
+      }
       const result = [];
       result.push(this.renderPetsCard(pets.slice(0, this.state.maxShown)));
       if (this.state.maxShown < pets.length) {
         result.push(this.renderShowMore());
       }
       return (
-        <div>
-          {result}
-        </div>);
+        <div>{result}</div>);
     } else {
-      return (
-        <div>
-        </div>
-      );
+      return (<div></div>);
     }
   }
 }
