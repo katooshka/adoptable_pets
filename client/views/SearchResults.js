@@ -29,7 +29,7 @@ export class SearchResults extends React.Component {
 
   renderShowMore() {
     return (
-      <div className="row center">
+      <div key="show-more" className="row center">
         <div className="col-xs-0 col-sm-1 col-lg-2"></div>
         <div className="col-xs-12 col-sm-10 col-lg-8 center">
           <MuiThemeProvider>
@@ -50,16 +50,16 @@ export class SearchResults extends React.Component {
   renderPetsCard(pets) {
     const defaultImage = 'https://orig00.deviantart.net/998c/f/2014/209/a/f/dog_and_cat_adoption_logo_by_otakucutie-d7spj4n.png';
     return (
-      <div className="row">
-        {pets.map((pet) => (
-          <div className="col-md-6 col-lg-4">
+      <div key="pets" className="row">
+        {pets.map((pet, index) => (
+          <div key={index.toString()} className="col-md-6 col-lg-4">
             <MuiThemeProvider>
               <div>
                 <Card className="card">
                   <CardMedia
                     overlay={<CardTitle title={pet.animalName} />}
                   >
-                    <img src={pet.image === '' ? defaultImage : pet.image} class={pet.isDead === 'TRUE' ? 'dead-pet' : 'alive-pet'} alt="Image not found" />
+                    <img src={pet.image === '' ? defaultImage : pet.image} className={pet.isDead === 'TRUE' ? 'dead-pet' : 'alive-pet'} alt="Image not found" />
                   </CardMedia>
                   <CardText>
                     <h6><b>Type:</b> {pet.animalType}</h6>

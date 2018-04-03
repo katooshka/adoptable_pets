@@ -163,11 +163,11 @@ export class SearchOptions extends React.Component {
                 <div className="row">
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <div className="center card-header">
                                     <h4>Pet name</h4>
                                 </div>
-                                <AnimalNames class="center"
+                                <AnimalNames className="center"
                                     names={this.props.names}
                                     updateName={this.updateName}
                                 />
@@ -177,7 +177,7 @@ export class SearchOptions extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <div className="center card-header">
                                     <h4>Pet type</h4>
                                 </div>
@@ -190,7 +190,7 @@ export class SearchOptions extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <ShowDeadAnimals
                                     updateShowDeadAnimals={this.updateShowDeadAnimals}
                                 />
@@ -199,7 +199,7 @@ export class SearchOptions extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <div className="center card-header">
                                     <h4>Pet gender</h4>
                                 </div>
@@ -212,7 +212,7 @@ export class SearchOptions extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <div className="center card-header">
                                     <h4>Pet breed</h4>
                                 </div>
@@ -231,7 +231,7 @@ export class SearchOptions extends React.Component {
                     </div>
                     <div className="col-md-6 col-lg-4">
                         <MuiThemeProvider>
-                            <Paper zDepth={1} class="option-padding card">
+                            <Paper zDepth={1} className="option-padding card">
                                 <div className="center card-header">
                                     <h4>Pet color</h4>
                                 </div>
