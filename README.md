@@ -7,7 +7,7 @@ A catalogue of data on adoptable pets where one can browse and search the datase
 
 Live demo available [here](http://ec2-35-178-39-97.eu-west-2.compute.amazonaws.com/).
 
-[Notes](https://github.com/katooshka/adoptable_pets/blob/master/notes.md) file contains some of my though about the challenge, what I found difficult, things to improve, etc.
+[Notes](https://github.com/katooshka/adoptable_pets/blob/master/notes.md) file contains some of my thoughts about the challenge, what I found difficult, things to improve, etc.
 
 ## Installation
 
