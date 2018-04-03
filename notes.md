@@ -25,3 +25,7 @@ I also found a lot of help in MongoDB documentation and in numerous articles ove
 We can consider different scenarios. If the number of the possible pets names is very large, the default approach is not a very efficient one. It would be better to use a trie data structure which will make searching for the autocomplete item more time efficient. Or, if the number of names is too big, the whole list of names should not be loaded to the client, instead the client should fetch options from the server every time the input changes.
 
 We also may want to suggest the most commonly used names to the user. In this case we will need to add additional ‘weight’ property to the name itself (the number of time it appears in the database).
+
+**Add integration and more unit tests**
+
+**Improve UI design**
