@@ -70,5 +70,7 @@ Here is the basic diagram on how the app is designed
 * Mocha, Chai for tests
 * React components: [Material-UI](http://www.material-ui.com/)
 
+The app has been tested and is working as expected in Chrome, Firefox and Opera browsers.
+
 
 
