@@ -5,7 +5,7 @@ Searchable catalogue of data on adoptable pets.
 
 A catalogue of data on adoptable pets where one can browse and search the dataset. 
 
-Demo: ![Pets gif](https://github.com/katooshka/adoptable_pets/blob/master/pets.gif)
+![Pets gif](https://github.com/katooshka/adoptable_pets/blob/master/pets.gif)
 
 [Notes](https://github.com/katooshka/adoptable_pets/blob/master/notes.md) file contains some of my thoughts about the challenge, what I found difficult, things to improve, etc.
 
